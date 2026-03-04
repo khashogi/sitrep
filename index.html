@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SITREP-2026-03-04 | Day 5 — US-Iran Conflict Intelligence Brief</title>
+  <meta name="description" content="Daily intelligence briefing on the US-Iran conflict. Day 5 of Operation Epic Fury / Roaring Lion / True Promise IV.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* ── CSS Variables ── */
+    :root {
+      --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'IBM Plex Mono', 'Menlo', monospace;
+      --max-width: 860px;
+      --radius: 4px;
+    }
+
+    [data-theme="light"] {
+      --bg: #ffffff;
+      --bg-secondary: #f6f7f9;
+      --bg-table-header: #eef1f5;
+      --bg-table-alt: #f9fafb;
+      --bg-code: #f0f2f5;
+      --bg-blockquote: #f8f9fb;
+      --border: #dce0e6;
+      --border-light: #e8ecf0;
+      --text: #1a1d23;
+      --text-secondary: #4a5060;
+      --text-muted: #6b7280;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --red: #dc2626;
+      --orange: #ea580c;
+      --green: #16a34a;
+      --yellow: #ca8a04;
+      --hr: #dce0e6;
+      --toggle-bg: #e5e7eb;
+      --toggle-knob: #ffffff;
+      --toggle-icon: #f59e0b;
+      --shadow: 0 1px 3px rgba(0,0,0,0.06);
+      --link: #2563eb;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0f1117;
+      --bg-secondary: #181b23;
+      --bg-table-header: #1c2030;
+      --bg-table-alt: #141720;
+      --bg-code: #1a1e2a;
+      --bg-blockquote: #161921;
+      --border: #2a2f3d;
+      --border-light: #232836;
+      --text: #e2e5eb;
+      --text-secondary: #9ca3b4;
+      --text-muted: #6b7485;
+      --accent: #60a5fa;
+      --accent-hover: #93bbfd;
+      --red: #f87171;
+      --orange: #fb923c;
+      --green: #4ade80;
+      --yellow: #fbbf24;
+      --hr: #2a2f3d;
+      --toggle-bg: #374151;
+      --toggle-knob: #0f1117;
+      --toggle-icon: #60a5fa;
+      --shadow: 0 1px 3px rgba(0,0,0,0.3);
+      --link: #60a5fa;
+    }
+
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      transition: background 0.3s ease, color 0.3s ease;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ── Top Bar ── */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.3s ease, border-color 0.3s ease;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    [data-theme="light"] .topbar { background: rgba(255,255,255,0.92); }
+    [data-theme="dark"] .topbar { background: rgba(15,17,23,0.92); }
+
+    .topbar-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .topbar-label span {
+      color: var(--red);
+      margin-right: 6px;
+    }
+
+    /* ── Dark Mode Toggle ── */
+    .theme-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .theme-toggle-label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .toggle-track {
+      position: relative;
+      width: 44px;
+      height: 24px;
+      background: var(--toggle-bg);
+      border-radius: 12px;
+      transition: background 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .toggle-knob {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 18px;
+      height: 18px;
+      background: var(--toggle-knob);
+      border-radius: 50%;
+      transition: transform 0.3s ease, background 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    [data-theme="dark"] .toggle-knob {
+      transform: translateX(20px);
+      background: var(--text);
+    }
+
+    .toggle-icon {
+      font-size: 10px;
+      line-height: 1;
+    }
+
+    [data-theme="light"] .toggle-icon-moon { display: none; }
+    [data-theme="dark"] .toggle-icon-sun { display: none; }
+
+    /* ── Article Container ── */
+    .article {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* ── Typography ── */
+    h1 {
+      font-size: 1.65rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 4px;
+      letter-spacing: -0.01em;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border);
+      letter-spacing: -0.005em;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    .meta {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      line-height: 1.8;
+    }
+
+    .meta strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    strong { font-weight: 600; }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background: var(--hr);
+      margin: 36px 0;
+    }
+
+    /* ── Lists ── */
+    ul, ol {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+
+    li {
+      margin-bottom: 6px;
+      line-height: 1.65;
+    }
+
+    li strong {
+      color: var(--text);
+    }
+
+    /* ── BLUF bullets ── */
+    .bluf ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .bluf li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+
+    .bluf li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* ── Tables ── */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 20px 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+      line-height: 1.55;
+    }
+
+    thead th {
+      background: var(--bg-table-header);
+      font-weight: 600;
+      text-align: left;
+      padding: 10px 14px;
+      border-bottom: 2px solid var(--border);
+      white-space: nowrap;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-secondary);
+    }
+
+    tbody td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border-light);
+      vertical-align: top;
+    }
+
+    tbody tr:nth-child(even) { background: var(--bg-table-alt); }
+    tbody tr:last-child td { border-bottom: none; }
+
+    /* Status colors */
+    .status-escalating { color: var(--red); font-weight: 600; }
+    .status-stable { color: var(--yellow); font-weight: 600; }
+    .status-stable-green { color: var(--green); font-weight: 600; }
+    .status-critical { color: var(--red); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; }
+
+    /* ── Scenario Blocks ── */
+    .scenario {
+      background: var(--bg-secondary);
+      border-left: 3px solid var(--border);
+      padding: 16px 20px;
+      margin: 16px 0;
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+
+    .scenario-a { border-left-color: var(--red); }
+    .scenario-b { border-left-color: var(--yellow); }
+    .scenario-c { border-left-color: var(--orange); }
+
+    .scenario strong:first-child {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
+
+    /* ── Source Manifest ── */
+    .sources h3 {
+      font-size: 0.95rem;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+
+    .sources ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sources li {
+      font-size: 0.84rem;
+      padding: 4px 0;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+
+    .sources li strong {
+      color: var(--text);
+    }
+
+    /* ── Indicators Lists ── */
+    .indicators ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .indicators li {
+      padding: 4px 0 4px 20px;
+      position: relative;
+    }
+
+    .indicators li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--text-muted);
+    }
+
+    /* ── Footer ── */
+    .report-footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--hr);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-style: italic;
+      line-height: 1.8;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      .article { padding: 24px 16px 60px; }
+      h1 { font-size: 1.35rem; }
+      h2 { font-size: 1.15rem; }
+      table { font-size: 0.78rem; }
+      thead th, tbody td { padding: 8px 10px; }
+      .topbar { padding: 10px 16px; }
+      .theme-toggle-label { display: none; }
+    }
+
+    /* ── Print ── */
+    @media print {
+      .topbar { display: none; }
+      .article { max-width: 100%; padding: 0; }
+      body { font-size: 11pt; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<header class="topbar">
+  <div class="topbar-label"><span>●</span> SITREP — Day 5 of Conflict</div>
+  <div class="theme-toggle" onclick="toggleTheme()" role="button" tabindex="0" aria-label="Toggle dark mode">
+    <span class="theme-toggle-label">Theme</span>
+    <div class="toggle-track">
+      <div class="toggle-knob">
+        <span class="toggle-icon toggle-icon-sun">☀</span>
+        <span class="toggle-icon toggle-icon-moon">☽</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Report Content -->
+<article class="article">
+
+  <h1>SITREP-2026-03-04 | DAY 5 OF CONFLICT</h1>
+  <div class="meta">
+    <strong>CLASSIFICATION:</strong> OPEN SOURCE<br>
+    <strong>SUBJECT:</strong> US-IRAN CONFLICT — DAILY INTELLIGENCE BRIEF<br>
+    <strong>PREPARED:</strong> March 4, 2026<br>
+    <strong>OPERATION NAMES:</strong> Epic Fury (US) / Roaring Lion (Israel) / True Promise IV (Iran)
+  </div>
+
+  <hr>
+
+  <!-- 1. BLUF -->
+  <h2>1. BOTTOM LINE UP FRONT (BLUF)</h2>
+
+  <div class="bluf">
+    <ul>
+      <li><strong>Israel launched its 10th wave of airstrikes on Tehran</strong>, targeting internal security command centers, Basij paramilitary infrastructure, missile launchers, and a Ghadr missile storage/production facility in Isfahan. The Assembly of Experts was struck in Qom on March 3 while convening to select Khamenei's successor. Israeli Defense Minister Katz threatened "elimination" of anyone named next supreme leader.</li>
+      <li><strong>US submarine sank Iranian frigate IRIS Dena in the Indian Ocean</strong> south of Galle, Sri Lanka, using a single Mark 48 torpedo — the first torpedo sinking of an enemy warship since WWII. 32 crew rescued by Sri Lanka Navy, 1 confirmed dead, 78+ wounded, 100+ unaccounted for. Earlier, the IRIS Jamaran was sunk. CENTCOM claims 20 Iranian ships destroyed and Iran's navy "effectively neutralized" in key waterways.</li>
+      <li><strong>Turkey/NATO drawn into the conflict</strong> — an Iranian ballistic missile was destroyed by NATO air and missile defense systems in the eastern Mediterranean. Turkey's Defense Ministry confirmed the intercept. Target unclear — if Turkey was targeted, Article 5 implications become live. Separately, Greek F-16s intercepted two drones near Cyprus airspace believed launched from Lebanon.</li>
+      <li><strong>Strait of Hormuz under de facto closure</strong> — IRGC claims full control. MarineTraffic playback shows visibly reduced transit density with vessels holding or remaining outside. P&amp;I insurance withdrawn effective March 5. A container ship was hit in the strait — first container vessel casualty. ~150 vessels stranded. Brent crude trading at ~$82-83 intraday, having hit $87+ on a single-session 9%+ spike. Goldman Sachs raised Q2 Brent forecast by $10 to $76/bbl; UBS raised full-year by $10 to $72/bbl — both warn $100+ if Hormuz closure persists 5+ weeks.</li>
+      <li><strong>6 US soldiers confirmed killed</strong> — 4 identified (Capt. Cody A. Khork, SFC Noah L. Tietjens, SFC Nicole M. Amor, Sgt. Declan J. Coady) from the 103rd Sustainment Command, killed by drone strike at Port Shuaiba, Kuwait. 18 US service members injured total. Senate War Powers vote pending. Democratic lawmakers warn of ground war after classified briefing.</li>
+    </ul>
+  </div>
+
+  <h3>BATTLEFIELD STATUS GRID</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Country</th>
+          <th>Status</th>
+          <th>Posture</th>
+          <th>Key Development (24h)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Iran</strong></td>
+          <td><span class="status-escalating">🔴 ESCALATING</span></td>
+          <td>Retaliating — missiles, drones, naval ops</td>
+          <td>Death toll 1,045 (Tasnim). Red Crescent earlier reported 787. IRGC ground forces entered operations with 230+ drones. Khamenei funeral postponed. Succession stalled. Internet blackout continues.</td>
+        </tr>
+        <tr>
+          <td><strong>Israel</strong></td>
+          <td><span class="status-escalating">🔴 ESCALATING</span></td>
+          <td>Full offensive</td>
+          <td>10th wave on Tehran. IAF dropped 4,000+ bombs (exceeding entire June 2025 12-day war). 1,600+ sorties. Struck covert "Minzadehei" nuclear compound. IDF claims 300 missile launchers destroyed.</td>
+        </tr>
+        <tr>
+          <td><strong>USA</strong></td>
+          <td><span class="status-escalating">🔴 ESCALATING</span></td>
+          <td>Full offensive</td>
+          <td>Sub sank IRIS Dena. 20 ships destroyed total. Gen. Caine says strikes will shift inland. Hegseth says "complete control of Iranian skies" within days. 2nd massive air assault imminent.</td>
+        </tr>
+        <tr>
+          <td><strong>UAE</strong></td>
+          <td><span class="status-stable">🟡 STABILIZING / WORSENING (econ)</span></td>
+          <td>Defensive</td>
+          <td>165 ballistic missiles, 2 cruise missiles, 541 drones intercepted — 35 drones fell within country. 3 killed, 58+ wounded. France shooting down drones. Dubai market down 4.9%. Fujairah oil storage struck.</td>
+        </tr>
+        <tr>
+          <td><strong>Saudi Arabia</strong></td>
+          <td><span class="status-escalating">🔴 ESCALATING</span></td>
+          <td>Defensive</td>
+          <td>US Embassy Riyadh hit by 2 drones. Embassy closed. Crown Prince Salman vowed military force. King Khalid Airport targeted — intercepted.</td>
+        </tr>
+        <tr>
+          <td><strong>Lebanon</strong></td>
+          <td><span class="status-escalating">🔴 ESCALATING</span></td>
+          <td>Hezbollah active / Govt opposes</td>
+          <td>50 killed, 335 wounded in 2 days. IDF launched ground maneuvers in south. Hezbollah: 24 attack incidents since March 2. Govt banned Hezbollah military activity. UNIFIL evacuating.</td>
+        </tr>
+        <tr>
+          <td><strong>Kuwait</strong></td>
+          <td><span class="status-escalating">🔴 ESCALATING</span></td>
+          <td>Defensive</td>
+          <td>Site of 6 US KIA. Embassy closed. 97 missiles + 283 drones intercepted (Kuwait MOD). Camp Buehring and Ali al-Salem targeted.</td>
+        </tr>
+        <tr>
+          <td><strong>Qatar</strong></td>
+          <td><span class="status-stable">🟡 STABLE (tense)</span></td>
+          <td>Defensive</td>
+          <td>18 projectiles intercepted (Qatar MOD). Iranian missile struck Al Udeid — no casualties. 10 IRGC operatives arrested. Airspace closed.</td>
+        </tr>
+        <tr>
+          <td><strong>Bahrain</strong></td>
+          <td><span class="status-stable">🟡 STABLE (tense)</span></td>
+          <td>Defensive</td>
+          <td>45 missiles + 9 drones intercepted. 5th Fleet HQ damaged. Crowne Plaza struck. 1 dead (debris). Salman Port offshore facility targeted.</td>
+        </tr>
+        <tr>
+          <td><strong>Oman</strong></td>
+          <td><span class="status-stable-green">🟢 STABLE (strained)</span></td>
+          <td>Neutral mediator</td>
+          <td>Duqm port fuel tank struck. Port of Salalah hit by drone. Iran denied targeting Oman. Muscat airport open — primary evacuation hub.</td>
+        </tr>
+        <tr>
+          <td><strong>Iraq</strong></td>
+          <td><span class="status-escalating">🔴 ESCALATING</span></td>
+          <td>Proxy battlefield</td>
+          <td>28+ militia attacks on US bases. Harir/Al-Bakr targeted. US/Israel struck Iranian border forces to enable Kurdish entry. Rumaila oil field shutting down.</td>
+        </tr>
+        <tr>
+          <td><strong>Turkey</strong></td>
+          <td><span class="status-escalating">🔴 NEW ESCALATION</span></td>
+          <td>NATO defense activated</td>
+          <td>Iranian missile destroyed by NATO systems in eastern Med. Greek F-16s intercepted 2 drones near Cyprus. First direct threat to NATO territory.</td>
+        </tr>
+        <tr>
+          <td><strong>Jordan</strong></td>
+          <td><span class="status-stable">🟡 STABLE (tense)</span></td>
+          <td>Defensive</td>
+          <td>13 missiles + 49 drones intercepted since Day 1. No new strikes in past 24h.</td>
+        </tr>
+        <tr>
+          <td><strong>Cyprus</strong></td>
+          <td><span class="status-stable">🟡 STABLE</span></td>
+          <td>Post-initial shock</td>
+          <td>RAF Akrotiri hit by drone March 2. Air alert March 4 — 2 drones shot down near airspace.</td>
+        </tr>
+        <tr>
+          <td><strong>Strait of Hormuz</strong></td>
+          <td><span class="status-critical">🔴 CRITICAL</span></td>
+          <td>De facto closed</td>
+          <td>IRGC claims full control. Container ship struck. ~150 vessels stranded. Insurance withdrawn. Maersk, Hapag-Lloyd, CMA CGM, COSCO suspended. Houthis resumed Red Sea attacks.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr>
+
+  <!-- 2. Military Operations -->
+  <h2>2. MILITARY OPERATIONS</h2>
+
+  <p><strong>US/Israeli Strikes on Iran (Day 5):</strong>
+  Israel conducted its 10th wave of airstrikes, with the IDF reporting strikes on internal security command centers in Tehran, dozens of Basij paramilitary targets, missile launchers, and air defense systems. IAF has now dropped over 4,000 bombs and conducted 1,600+ sorties since February 28 — exceeding the total munitions expenditure of the entire June 2025 12-day war (Operation Rising Lion).</p>
+
+  <p>The IDF struck the covert "Minzadehei" compound in Tehran Province where nuclear scientists were developing what the IDF described as a key component for nuclear weapons. This follows the March 2 strike on the Natanz Nuclear Facility — IAEA confirmed satellite imagery shows damage to entrance buildings at Natanz's underground Fuel Enrichment Plant but stated no radiological consequences. Russia warned Bushehr nuclear power plant is under threat, with explosions heard kilometers from its perimeter.</p>
+
+  <p>The combined force has struck targets across the breadth of Iran: Tehran, Karaj, Isfahan, Qom, Shiraz, Tabriz, Bandar Abbas, Mashhad, Rezvanshahr, Kermanshah, Sanandaj, and Marivan. Satellite imagery from March 3 shows 11 craters on the runway of the 2nd Artesh Air Force Tactical Airbase in Tabriz, likely rendering it inoperable. The 7th Artesh Airbase in Shiraz also shows damage.</p>
+
+  <p><strong>Command Transition — Strikes Shifting Inland:</strong>
+  Gen. Dan Caine (Joint Chiefs Chairman) told reporters the campaign will now shift inland, with the combined force expecting "complete control of Iranian skies" within days. A second massive air assault with 500- and 2,000-pound bombs is imminent. Hegseth noted that as Iranian air defenses are degraded, less sophisticated (cheaper) weapons can be used, easing munition stockpile concerns.</p>
+
+  <p><strong>US Naval Action:</strong>
+  USS submarine (unidentified class) sank Iranian frigate IRIS Dena approximately 40 nautical miles south of Galle, Sri Lanka, using a single Mark 48 torpedo. The vessel was transiting back to Iran from the International Fleet Review 2026 in India. 32 crew rescued by Sri Lanka Navy, transported to Karapitiya Teaching Hospital. 1 confirmed dead, 78 injured, 100+ unaccounted for — ship sank before rescue forces arrived. Defense Secretary Hegseth described it as "quiet death." CENTCOM claims 20 Iranian warships destroyed total, including the earlier sinking of IRIS Jamaran (Moudge-class frigate). US military states it has "effectively neutralized Iran's major naval presence in theater."</p>
+
+  <p><strong>Iranian Command Structure Degradation:</strong>
+  Confirmed killed: Supreme Leader Ali Khamenei, Armed Forces Chief of Staff Maj. Gen. Abdolrahim Mousavi, Ali Shamkhani (SNSC), Salah Asadi (intelligence), Mohammad Shirazi (military office head), SPND head Hossein Jabal Amelian, former SPND head Reza Mozaffari Nia, AFGS Logistics Deputy Mohsen Dareh Baghi, AFGS Planning head Bahram Hosseini Motlagh, AFGS Logistics Dept head Hassan Ali Tajik, Supreme Leader Office Deputy Akbar Ebrahim Zadeh. Hezbollah liaison with Iran and PIJ military commander in Lebanon also eliminated.</p>
+
+  <p>CBS reported 40 Iranian officials killed across multiple locations on Day 1. Trump told NBC a "large amount of leadership" killed. Reports of Ahmadinejad's death later retracted — reportedly alive. NYT reported Iran's "top intelligence chief" survived a targeted strike but intelligence agencies were "decimated." Unspecified sources told anti-regime media that parts of Iran's chain of command have been disrupted, with some military commanders stopping reporting to bases.</p>
+
+  <p><strong>Iran's Military Response — Operation True Promise IV:</strong>
+  IRGC announced ground forces entered battlefield operations with 230+ drones. IRGC Navy conducting suicide drone attacks on US bases — Tasnim describes these as playing a "major role." IRGC claims a US destroyer was hit by missiles (unconfirmed by CENTCOM). Tasnim also claims Iran shot down a US F-15 fighter jet (unverified — treat Iranian claims on US losses with high skepticism). IRGC claims 650 US casualties and forced retreat of an American carrier — this is almost certainly propaganda; CENTCOM confirms 6 KIA and 18 wounded.</p>
+
+  <p>Iran has launched over 500 ballistic missiles and 2,000+ drones since conflict began (per US officials). However, CTP-ISW assesses that missile fire has dropped sharply — a 70% decrease in Iranian missile barrages toward Israel — consistent with the IDF claim of destroying 300 Iranian launchers. Iran's short-range missile capability against the UAE has similarly declined.</p>
+
+  <p><strong>Israel-Hezbollah Front:</strong>
+  Hezbollah has conducted 24 attack incidents since entering the war on March 2, including rockets toward Upper Galilee (HaGoshrim, Ma'ayan Baruch, Ghajar, Kfar Yuval — direct hit on residential home). Hezbollah confirmed it attacked an IDF base in Haifa in response to Khamenei's killing. The IDF spokesperson called this "an official declaration of war by Hezbollah." Israel responded with strikes on Beirut, Beqaa Valley, and southern Lebanon. IDF told all civilians in southern Lebanon to move north of the Litani River.</p>
+
+  <p>Lebanese government moved to the next phase: explicit prohibition of all Hezbollah security-military activity, designated as illegal. LBCI reported Lebanese Army arrested 12 armed Hezbollah operatives at a checkpoint. UNIFIL ordered evacuation of non-essential non-Lebanese staff.</p>
+
+  <hr>
+
+  <!-- 3. Iranian Retaliation -->
+  <h2>3. IRANIAN RETALIATION — GULF THEATER (Cumulative)</h2>
+
+  <p><strong>UAE:</strong> Total since Day 1: 165 ballistic missiles, 2 cruise missiles, and 541 drones intercepted — but 35 drones fell within country causing material damage (UAE MOD). 3 dead, 58+ wounded. Specific impacts: Zayed International Airport struck (1 killed, 7 wounded), Dubai Airport (4 employees injured), Burj Al Arab fire on Palm Jumeirah, Jebel Ali port fire from interception debris. Fujairah Oil Industry Zone fire from intercepted drone debris. Iranian drones struck Fujairah oil storage infrastructure — notably the only major UAE export terminal that avoids Hormuz. France actively intercepting Iranian drones over UAE airspace with Rafale jets.</p>
+
+  <p><strong>Saudi Arabia:</strong> US Embassy Riyadh struck by 2 drones — fire broke out, no casualties. Crown Prince Salman vowed military force against further Iranian incursions, calling strikes "cowardly." King Khalid International Airport in Riyadh targeted — intercepted. Prince Sultan Air Base (hosts US troops) targeted — intercepted. Saudi has not released cumulative interception figures but confirmed incoming fire. Syrian government condemned Iranian attacks on Saudi Arabia.</p>
+
+  <p><strong>Kuwait:</strong> Site of the war's first US combat deaths. 97 ballistic missiles and 283 drones intercepted total (Kuwait MOD). Ali al-Salem Air Base struck by ballistic missiles — intercepted by Kuwaiti air defense. Kuwait International Airport hit by drone — employees injured, terminal damaged. Camp Buehring targeted. 3 US F-15s involved in a friendly fire incident — pilots safe (CENTCOM confirmed March 2). Embassy closed.</p>
+
+  <p><strong>Qatar:</strong> 18 ballistic missiles, cruise missiles and drones intercepted (Qatar MOD). Iranian ballistic missile struck Al Udeid Air Base — the largest US military installation in the Middle East — no casualties reported. 10 suspected IRGC operatives arrested on espionage and drone-related sabotage charges. Qatar's Foreign Ministry denied reports that Qatar conducted strikes against Iran. Airspace closed; Qatar Airways suspended.</p>
+
+  <p><strong>Bahrain:</strong> 45 missiles and 9 drones intercepted (Bahrain Defense Force), including Shahed-136 kamikaze drones. US 5th Fleet HQ damaged — footage showed smoke rising from base. Crowne Plaza Hotel struck. Era Views Tower struck by drone. Offshore facility near Salman Port targeted — fire, 1 shipyard worker killed by debris. IRGC claimed large-scale attack on Sheikh Isa Air Base with 20 drones and 3 missiles.</p>
+
+  <p><strong>Oman:</strong> Duqm port — multiple drones struck fuel tanker. Port of Salalah struck by drone. Iran denied targeting Oman. 1 expatriate worker wounded in earlier drone attack. Muscat airport remains open — primary evacuation route.</p>
+
+  <p><strong>Iraq:</strong> Islamic Resistance in Iraq claims 28+ attacks on US bases with dozens of drones and missiles. Harir base (near Erbil) attacked. Al-Bakr military airfield (Salah al-Din province) targeted. 5 Kataib Hezbollah operatives killed in al-Qaim (Syria-Iraq border). US/Israel struck Iranian border forces along Iran-Iraq border — CTP-ISW assesses objective was to enable Kurdish forces to enter Iran. Rumaila oil field shutting down operations due to storage overflow with tankers unable to exit Hormuz.</p>
+
+  <hr>
+
+  <!-- 4. Critical Infrastructure -->
+  <h2>4. CRITICAL INFRASTRUCTURE STATUS</h2>
+
+  <h3>Aviation</h3>
+  <ul>
+    <li>11,000+ flights canceled since conflict began</li>
+    <li><strong>DXB (Dubai):</strong> Suspended until Mar 4 23:59 UAE time (Emirates)</li>
+    <li><strong>AUH (Abu Dhabi):</strong> Etihad — all commercial flights suspended</li>
+    <li><strong>DOH (Doha):</strong> Airspace closed, Qatar Airways suspended</li>
+    <li><strong>BAH (Bahrain):</strong> Airport CLOSED (struck by drone)</li>
+    <li><strong>KWI (Kuwait):</strong> Airport CLOSED (drone struck terminal)</li>
+    <li><strong>MCT (Muscat):</strong> OPEN — primary evacuation hub</li>
+    <li><strong>Air Arabia:</strong> Extended suspension to March 9</li>
+    <li><strong>Israeli airspace:</strong> Active threat — sirens sounding nationwide</li>
+    <li><strong>Cyprus:</strong> Air security alert March 4 — drones intercepted</li>
+  </ul>
+
+  <h3>Embassies</h3>
+  <ul>
+    <li><strong>US Embassy Kuwait:</strong> CLOSED until further notice</li>
+    <li><strong>US Embassy Saudi Arabia:</strong> CLOSED (drone strike, fire)</li>
+    <li><strong>US Embassy Bahrain:</strong> Shelter-in-place; school on base canceled</li>
+    <li><strong>US Embassy Oman:</strong> Shelter-in-place issued</li>
+    <li><strong>US Embassy Jerusalem:</strong> Unable to assist Americans departing Israel</li>
+    <li><strong>US Consulate Dubai:</strong> Parking lot struck by drone</li>
+    <li>Non-emergency personnel departure: Jordan, Bahrain, Iraq, Qatar, Kuwait, UAE</li>
+    <li>State Department: Americans in 12+ countries told to "DEPART NOW"</li>
+  </ul>
+
+  <h3>Strait of Hormuz</h3>
+  <ul>
+    <li>IRGC claimed full control as of March 4</li>
+    <li>MarineTraffic: visibly reduced transit density — vessels holding outside</li>
+    <li>First container ship casualty confirmed (Seatrade Maritime)</li>
+    <li>~150 vessels stranded/anchored outside strait</li>
+    <li>P&amp;I insurance withdrawn effective March 5</li>
+    <li>Trump ordered DFC political risk insurance + Navy escorts</li>
+    <li>Maersk, Hapag-Lloyd, CMA CGM, COSCO — all suspended transits</li>
+    <li>Houthis resumed Red Sea/Bab el-Mandeb attacks — Suez compromised</li>
+    <li>Emergency freight surcharges in effect (Maersk, effective March 2)</li>
+  </ul>
+
+  <h3>Evacuations</h3>
+  <ul>
+    <li>9,000+ Americans evacuated (per Rubio as of March 3)</li>
+    <li>1,500+ additional Americans requested assistance</li>
+    <li>Airspace closures complicating flights — planes turned back mid-air</li>
+    <li>Czech, German, French, UK evacuation flights underway</li>
+    <li>30,000+ German tourists stranded</li>
+  </ul>
+
+  <hr>
+
+  <!-- 5. Humanitarian Impact -->
+  <h2>5. HUMANITARIAN IMPACT</h2>
+
+  <p><strong>Iran:</strong> 1,045 dead per Tasnim (state media, cumulative March 4). Iranian Red Crescent earlier reported 787. Credible range: 800–1,200. The Minab girls' school strike remains the deadliest single incident — 165 students (mostly girls) and 14 teachers killed per Iranian officials. US military says it is "looking into" the incident; Israel denies the strike. Tehran residents describe bread lines, gas shortages, understaffed hospitals, sustained bombardment. Internet blackout continues. Basij forces reportedly fired at buildings in Tehran after hearing anti-regime chanting. Ayatollah Sistani's office condemned US aggression.</p>
+
+  <p><strong>Israel:</strong> 11 killed in Iranian strikes since conflict began. Beit Shemesh strike killed 9 (March 1). 19 injured in Beersheba. Sirens sounding across Jerusalem, Tel Aviv, and nationwide on March 4. IDF confirmed Iran launched a cluster munition warhead at Israel. Population in shelters for extended periods — frequent small barrages aimed at exhausting home front.</p>
+
+  <p><strong>Gulf States:</strong> UAE: 3 dead, 58+ wounded. Kuwait: 6 US KIA, 32+ injured. Bahrain: 1 dead, 6+ injured. Qatar: 16+ injured. Oman: 1 expatriate wounded. Migrant worker casualties across Gulf underreported.</p>
+
+  <p><strong>Lebanon:</strong> 50 killed, 335 wounded in 2 days of Israeli strikes. 6 killed in Aramoun March 4 morning. Thousands displaced. IDF ordered southern Lebanon evacuation.</p>
+
+  <p><strong>Stranded Travelers:</strong> Hundreds of thousands stranded. Czech, German, French, British evacuation flights underway. 1,600+ tourists stranded in Bali from canceled connections.</p>
+
+  <hr>
+
+  <!-- 6. Diplomatic & Political -->
+  <h2>6. DIPLOMATIC &amp; POLITICAL DEVELOPMENTS</h2>
+
+  <p><strong>US Domestic:</strong> Trump maintains "4 to 5 weeks" timeline but says it could go "far longer." Hegseth says war "will not be endless." Rubio says "the hardest hits are yet to come." Senate War Powers vote pending. Trump's administration offering competing rationales — at times exaggerated or at odds with US intelligence. Democrats challenging justification. Massive protests in LA, Houston, and other cities.</p>
+
+  <p><strong>Iran Internal:</strong> Khamenei's funeral postponed "until further notice." Assembly of Experts bombed in Qom during succession meeting — Iran denies anyone was hit. Ayatollah Ahmad Khatami told state TV: "close to a conclusion" on successor. Mojtaba Khamenei (son) emerging as frontrunner but clerics wary he'd be targeted. Trump says "most of the people we had in mind" for post-regime leaders "are dead already." Israel's Defense Minister threatened "elimination" of anyone named. Larijani rejected negotiations. FM Araghchi accused Trump of "betraying diplomacy." Iran banned food exports. Internet blackout continues. NCRI announced Provisional Government from Paris.</p>
+
+  <p><strong>International Response:</strong> China urged respect for Iran's sovereignty. Russia warned about Bushehr. E3 (UK, France, Germany) resolved to back "proportionate military defensive measures." Spain prohibited US use of Spanish bases — Trump threatened to cut trade. France deploying Charles de Gaulle; Rafale jets active over UAE. UK allowed bases for "defensive" strikes. Syria condemned Iranian attacks on Arab states. Houthis resumed Red Sea attacks.</p>
+
+  <p><strong>Potential Backchannel:</strong> Euronews reported Iranian intelligence agents have indicated openness to talks with CIA to end the war — the most significant de-escalation signal to date, contradicting Larijani's public rejection.</p>
+
+  <hr>
+
+  <!-- 7. Economic & Energy -->
+  <h2>7. ECONOMIC &amp; ENERGY IMPACT</h2>
+
+  <p><strong>Oil:</strong> Brent crude trading ~$82-83 intraday March 4 (range $77.53–$85.10). Hit intraday high above $87 — largest single-session spike of 9%+. WTI at ~$76.25 (+7.05%). Goldman Sachs raised Q2 Brent forecast by $10 to $76/bbl — warning $100 if Hormuz stays flat 5+ weeks. UBS raised full-year by $10 to $72/bbl — warning $90+ if energy infrastructure struck, $100+ if Hormuz extends. Pre-conflict Brent was ~$65-66.</p>
+
+  <p><strong>Markets:</strong> Dubai benchmark down 4.9% — worst since May 2022. Abu Dhabi down 3%+. KOSPI plunged 6.6%. Nikkei down 3.2%. US airlines dropped 5-6%. Goldman Sachs CEO: markets "surprisingly benign" but need weeks to digest. US financial sector on heightened cyber alert for Iran-linked attacks.</p>
+
+  <p><strong>Shipping:</strong> Strait of Hormuz effectively closed. All major lines suspended. Emergency surcharges in effect. Houthis resumed Red Sea attacks — Cape of Good Hope rerouting adds weeks. Iraq's Rumaila oil field shutting down. Container ship struck in Hormuz. Fujairah oil storage hit by drones. Energy Aspects analyst: US can neutralize formal closure but cannot control "one-off attacks on tankers."</p>
+
+  <p><strong>Energy Security:</strong> 20M+ barrels/day and ~80M tons/year LNG normally transit Hormuz. OPEC+ pledged minor increase — insufficient. India faces dual shock. China has reserves but exposed. Russia likely beneficiary.</p>
+
+  <hr>
+
+  <!-- 8. Predictive Analysis -->
+  <h2>8. PREDICTIVE ANALYSIS — NEXT 48 HOURS</h2>
+
+  <div class="scenario scenario-a">
+    <strong>Scenario A: Sustained Escalation / Campaign Phase Transition (55%)</strong>
+    <p>US/Israeli strikes shift inland per Gen. Caine's announcement, with second massive air assault imminent. Iran's retaliation continues but at diminishing capability — 70% drop in missile fire toward Israel. Hormuz remains closed. Lebanon front intensifies as IDF conducts ground maneuvers. Assembly of Experts names a successor under threat of Israeli strikes. Oil pushes toward $85-90.</p>
+  </div>
+
+  <div class="scenario scenario-b">
+    <strong>Scenario B: Backchannel De-escalation Signal (25%)</strong>
+    <p>Euronews report of Iranian intelligence agents indicating openness to CIA talks is the most significant de-escalation signal to date. If backchannel communications produce a ceasefire framework, we could see a pause in strike tempo within 48 hours. Hormuz partially reopens with Navy escorts. Oil pulls back to $75-80. Requires Iran's fragmented leadership to authorize negotiations — uncertain without a supreme leader.</p>
+  </div>
+
+  <div class="scenario scenario-c">
+    <strong>Scenario C: Major Escalation Trigger (20%)</strong>
+    <p>A catastrophic event forces expanded involvement. Top candidates: (1) Bushehr nuclear plant struck — Russia warned imminent; (2) NATO Article 5 formally invoked; (3) Iran strikes major Gulf energy infrastructure (Aramco, Qatar LNG); (4) Significant US naval casualties; (5) US-backed Kurdish uprising inside Iran. Oil spikes past $100.</p>
+  </div>
+
+  <div class="indicators">
+    <h3>Key Indicators to Watch</h3>
+    <ul>
+      <li><strong>Escalation:</strong> US ground forces deployed, Bushehr struck, another NATO intercept, Hezbollah major attack, Iran sinks commercial vessel, Kurdish insurgency launches</li>
+      <li><strong>De-escalation:</strong> CIA-IRGC backchannel confirmed, missile fire continues steep decline (already 70% down), Trump announces ceasefire terms, successor named and willing to negotiate</li>
+      <li><strong>Wildcard:</strong> Regime fractures internally, major cyber attack on financial infrastructure, China moves to material involvement, Mojtaba Khamenei named triggering legitimacy crisis</li>
+    </ul>
+
+    <h3>Second-Order Effects</h3>
+    <ul>
+      <li><strong>Hormuz closed &gt;5 weeks →</strong> Brent crosses $100 (Goldman), India energy crisis, central banks pause rate cuts, Iraq shuts more oil fields</li>
+      <li><strong>Turkey/NATO engages →</strong> Russian calculus shifts, potential NATO-Iran direct confrontation</li>
+      <li><strong>Hezbollah full escalation →</strong> US military resources split, Lebanese Army forced to choose sides</li>
+      <li><strong>No successor named →</strong> Constitutional crisis on top of military crisis, NCRI fills vacuum, internal fragmentation</li>
+      <li><strong>Kurdish insurgency →</strong> Iran faces simultaneous external war + internal rebellion, potentially drawing Turkey in</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <!-- 9. Prediction Tracker -->
+  <h2>9. PREDICTION TRACKER (PREVIOUS CYCLE)</h2>
+  <p><strong>N/A — This is SITREP Day 1.</strong> Prediction tracking begins with SITREP-2026-03-05.</p>
+
+  <hr>
+
+  <!-- 10. Source Manifest -->
+  <div class="sources">
+    <h2>10. SOURCE MANIFEST</h2>
+
+    <h3>Major News Outlets</h3>
+    <ul>
+      <li>CNN Live Updates (Mar 3-4) — <a href="https://www.cnn.com/world/live-news/iran-war-us-israel-trump-03-03-26" target="_blank" rel="noopener">cnn.com</a></li>
+      <li>CNN — What We Know Day 4 — <a href="https://edition.cnn.com/2026/03/03/middleeast/iran-us-israel-what-we-know-intl" target="_blank" rel="noopener">edition.cnn.com</a></li>
+      <li>Al Jazeera — Day 5 Summary — <a href="https://www.aljazeera.com/news/2026/3/4/israel-iran-continue-attacks-as-war-enters-its-fifth-day-engulfs-region" target="_blank" rel="noopener">aljazeera.com</a></li>
+      <li>Al Jazeera Live Blog (Mar 4) — <a href="https://www.aljazeera.com/news/liveblog/2026/3/4/iran-live-news-us-embassy-in-dubai-hit-israel-pounds-tehran-beirut" target="_blank" rel="noopener">aljazeera.com</a></li>
+      <li>Al Jazeera — Hormuz, Israel Sustainability, Gulf States — <a href="https://www.aljazeera.com/news/2026/3/4/irgc-says-iran-in-complete-control-of-strait-of-hormuz-amid-trump-threats" target="_blank" rel="noopener">aljazeera.com</a></li>
+      <li>CNBC — Oil Prices, Live Updates, Hormuz — <a href="https://www.cnbc.com/2026/03/04/us-iran-war-live-updates.html" target="_blank" rel="noopener">cnbc.com</a></li>
+      <li>NPR — US Mixed Messages (Mar 3-4) — <a href="https://www.npr.org/2026/03/03/nx-s1-5732968/iran-us-trump-war" target="_blank" rel="noopener">npr.org</a></li>
+      <li>Washington Post Live Updates (Mar 4) — <a href="https://www.washingtonpost.com/world/2026/03/04/us-iran-israel-strikes-trump-live-updates/" target="_blank" rel="noopener">washingtonpost.com</a></li>
+      <li>Euronews — Day 5 Live / CIA backchannel — <a href="https://www.euronews.com/2026/03/04/us-israeli-strikes-hit-beirut-and-tehran-as-trump-set-to-defend-iran-war-in-congress" target="_blank" rel="noopener">euronews.com</a></li>
+      <li>NBC New York — Embassy strikes, War Powers — <a href="https://www.nbcnewyork.com/news/national-international/iran-us-israel-middle-east-conflict-march-03-2026-live-updates/6471265/" target="_blank" rel="noopener">nbcnewyork.com</a></li>
+    </ul>
+
+    <h3>Iranian Sources</h3>
+    <ul>
+      <li>Tasnim News Agency (EN) — IRGC ops, death toll, succession — <a href="https://tasnimnews.ir/en" target="_blank" rel="noopener">tasnimnews.ir</a></li>
+      <li>Mehr News / IRNA — referenced via secondary reporting</li>
+    </ul>
+
+    <h3>Israeli Sources</h3>
+    <ul>
+      <li>Times of Israel — Liveblog Mar 3 — <a href="https://www.timesofisrael.com/liveblog-march-3-2026/" target="_blank" rel="noopener">timesofisrael.com</a></li>
+      <li>Times of Israel — Homepage — <a href="https://www.timesofisrael.com/" target="_blank" rel="noopener">timesofisrael.com</a></li>
+    </ul>
+
+    <h3>Regional Sources</h3>
+    <ul>
+      <li>Bahrain News Agency (BNA) — <a href="https://www.bna.bh/en/" target="_blank" rel="noopener">bna.bh</a></li>
+      <li>Qatar News Agency (QNA) — <a href="https://qna.org.qa/en/News-Area/News/2026-3/2/bahrain-reports-iranian-attack-on-offshore-facility-near-salman-port" target="_blank" rel="noopener">qna.org.qa</a></li>
+      <li>Wikipedia — 2026 Iranian Strikes on Bahrain — <a href="https://en.wikipedia.org/wiki/2026_Iranian_strikes_on_Bahrain" target="_blank" rel="noopener">wikipedia.org</a></li>
+    </ul>
+
+    <h3>Government / Military Primary Sources</h3>
+    <ul>
+      <li>CENTCOM Press Releases — <a href="https://www.centcom.mil/MEDIA/PRESS-RELEASES/" target="_blank" rel="noopener">centcom.mil</a></li>
+      <li>Trump Statement on Operation Epic Fury — <a href="https://china.usembassy-china.org.cn/president-donald-trumps-statement-on-operation-epic-fury/" target="_blank" rel="noopener">usembassy-china.org.cn</a></li>
+      <li>UK House of Commons Library — <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-10521/" target="_blank" rel="noopener">commonslibrary.parliament.uk</a></li>
+      <li>Maersk — Emergency Freight Increase — <a href="https://www.maersk.com/news/articles/2026/03/02/strait-of-hormuz-emergency-freight-increase" target="_blank" rel="noopener">maersk.com</a></li>
+      <li>Hapag-Lloyd — Strait Suspension — <a href="https://www.hapag-lloyd.com/en/services-information/news/2026/02/suspension-of-strait-of-hormuz-transits-due-to-security-closure.html" target="_blank" rel="noopener">hapag-lloyd.com</a></li>
+      <li>COSCO — Customer Advisory — <a href="https://en.coscoshipping.com/News/LatestNews/art/2026/art_7856363411614cfa92c67dccc2598069.html" target="_blank" rel="noopener">coscoshipping.com</a></li>
+    </ul>
+
+    <h3>OSINT / Think Tanks</h3>
+    <ul>
+      <li><strong>CTP-ISW</strong> (TOP SOURCE) — Evening/Morning Special Reports Mar 1-3 — <a href="https://www.criticalthreats.org/analysis/iran-update-evening-special-report-march-3-2026" target="_blank" rel="noopener">criticalthreats.org</a></li>
+      <li>Wikipedia — 2026 Iran Conflict — <a href="https://en.wikipedia.org/wiki/2026_Israeli%E2%80%93United_States_strikes_on_Iran" target="_blank" rel="noopener">wikipedia.org</a></li>
+      <li>Wikipedia — Timeline — <a href="https://en.wikipedia.org/wiki/Timeline_of_the_2026_Iran_conflict" target="_blank" rel="noopener">wikipedia.org</a></li>
+      <li>Wikipedia — Strait of Hormuz Crisis — <a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis" target="_blank" rel="noopener">wikipedia.org</a></li>
+      <li>Alma Center — Daily Reports Mar 1, 3 — <a href="https://israel-alma.org/daily-report-the-second-iran-war-march-3-2026-1900/" target="_blank" rel="noopener">israel-alma.org</a></li>
+      <li>JINSA — Operations Update — <a href="https://jinsa.org/wp-content/uploads/2026/03/Operations-Epic-Fury-and-Roaring-Lion-03-01-26.pdf" target="_blank" rel="noopener">jinsa.org</a></li>
+      <li>FDD Long War Journal — Gulf Retaliation — <a href="https://www.longwarjournal.org/archives/2026/03/iran-expands-retaliation-for-us-israel-campaign-across-arab-states-february-28-march-2.php" target="_blank" rel="noopener">longwarjournal.org</a></li>
+      <li>Breaking Defense — GCC Nightmare — <a href="https://breakingdefense.com/2026/03/iran-attacks-uae-saudi-missiles-drones-gcc-air-defense/" target="_blank" rel="noopener">breakingdefense.com</a></li>
+      <li>NCRI — Iran News Brief — <a href="https://www.ncr-iran.org/en/news/iran-news-in-brief-news/iran-news-in-brief-march-4-2026/" target="_blank" rel="noopener">ncr-iran.org</a></li>
+      <li>The War Zone — Hormuz Escort — <a href="https://www.twz.com/sea/trumps-plan-to-escort-ships-through-strait-of-hormuz-would-put-u-s-navy-warships-in-the-crosshairs" target="_blank" rel="noopener">twz.com</a></li>
+      <li>Stars and Stripes — Bahrain 5th Fleet — <a href="https://www.stripes.com/theaters/middle_east/2026-02-28/strikes-on-bahrain-iran-israel-20902624.html" target="_blank" rel="noopener">stripes.com</a></li>
+    </ul>
+
+    <h3>UN / International</h3>
+    <ul>
+      <li>UN News — Day 4 &amp; 5 Live Coverage — <a href="https://news.un.org/en/story/2026/03/1167076" target="_blank" rel="noopener">news.un.org</a></li>
+      <li>IAEA — Referenced via CTP-ISW and UK Commons (Natanz, no radiological consequences)</li>
+    </ul>
+
+    <h3>Financial / Energy</h3>
+    <ul>
+      <li>Goldman Sachs — Q2 Brent Revision — <a href="https://www.investing.com/news/commodities-news/goldman-sachs-raises-q2-brent-oil-price-forecast-by-10-to-76-a-barrel-4539911" target="_blank" rel="noopener">investing.com</a></li>
+      <li>UBS — Brent Revision — <a href="https://www.investing.com/news/commodities-news/ubs-raises-average-brent-price-forecasts-for-first-quarter-full-year-2026-4540835" target="_blank" rel="noopener">investing.com</a></li>
+      <li>Investing.com — Brent Futures — <a href="https://www.investing.com/commodities/brent-oil" target="_blank" rel="noopener">investing.com</a></li>
+      <li>MarineTraffic — Hormuz (via The War Zone) — <a href="https://www.marinetraffic.org/HORMUZ-STRAIT/ship-traffic-tracker" target="_blank" rel="noopener">marinetraffic.org</a></li>
+      <li>Seatrade Maritime — Container ship hit — <a href="https://www.seatrade-maritime.com/containers/container-ship-hit-in-strait-of-hormuz-nearly-150-vessels-trapped" target="_blank" rel="noopener">seatrade-maritime.com</a></li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <div class="report-footer">
+    END SITREP-2026-03-04 (REVISED)<br>
+    Sources consulted: 40+ individual URLs across 25+ outlets spanning Western, Iranian, Israeli, Gulf, OSINT, military primary, financial, and UN sources.<br>
+    Next report: SITREP-2026-03-05 — Prediction tracker will compare Scenario A/B/C against actual outcomes.
+  </div>
+
+</article>
+
+<script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    const current = html.getAttribute('data-theme');
+    const next = current === 'light' ? 'dark' : 'light';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('sitrep-theme', next);
+  }
+
+  // Restore saved theme
+  (function() {
+    const saved = localStorage.getItem('sitrep-theme');
+    if (saved) {
+      document.documentElement.setAttribute('data-theme', saved);
+    }
+  })();
+
+  // Keyboard support for toggle
+  document.querySelector('.theme-toggle').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleTheme();
+    }
+  });
+</script>
+
+</body>
+</html>
