@@ -3,126 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SITREP-2026-03-07 | Day 8 — US-Iran Conflict Intelligence Brief</title>
-  <meta name="description" content="Daily intelligence briefing on the US-Iran conflict. Day 8 of Conflict of Operation Epic Fury / Roaring Lion / True Promise IV.">
+  <title>SITREP-2026-03-09 | Day 10 — US-Iran Conflict Intelligence Brief</title>
+  <meta name="description" content="Daily intelligence briefing on the US-Iran conflict. Day 10 of Conflict of Operation Epic Fury / Roaring Lion / True Promise IV.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <style>
-    /* ── CSS Variables ── */
     :root {
-      --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-mono: 'IBM Plex Mono', 'Menlo', monospace;
-      --max-width: 860px;
-      --radius: 4px;
+      --font-sans: 'IBM Plex Sans', -apple-system, sans-serif;
+      --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+      --bg: #f8f7f4;
+      --bg-secondary: #f0ede8;
+      --border: #ddd9d0;
+      --text: #1a1916;
+      --text-secondary: #4a4741;
+      --text-muted: #7a746e;
+      --accent: #c0392b;
+      --red: #c0392b;
+      --orange: #d35400;
+      --yellow: #b7860b;
+      --green: #1a6b3c;
+      --radius: 6px;
     }
-
-    [data-theme="light"] {
-      --bg: #ffffff;
-      --bg-secondary: #f6f7f9;
-      --bg-table-header: #eef1f5;
-      --bg-table-alt: #f9fafb;
-      --bg-code: #f0f2f5;
-      --bg-blockquote: #f8f9fb;
-      --border: #dce0e6;
-      --border-light: #e8ecf0;
-      --text: #1a1d23;
-      --text-secondary: #4a5060;
-      --text-muted: #6b7280;
-      --accent: #2563eb;
-      --accent-hover: #1d4ed8;
-      --red: #dc2626;
-      --orange: #ea580c;
-      --green: #16a34a;
-      --yellow: #ca8a04;
-      --hr: #dce0e6;
-      --toggle-bg: #e5e7eb;
-      --toggle-knob: #ffffff;
-      --toggle-icon: #f59e0b;
-      --shadow: 0 1px 3px rgba(0,0,0,0.06);
-      --link: #2563eb;
-    }
-
     [data-theme="dark"] {
-      --bg: #0f1117;
-      --bg-secondary: #181b23;
-      --bg-table-header: #1c2030;
-      --bg-table-alt: #141720;
-      --bg-code: #1a1e2a;
-      --bg-blockquote: #161921;
-      --border: #2a2f3d;
-      --border-light: #232836;
-      --text: #e2e5eb;
-      --text-secondary: #9ca3b4;
-      --text-muted: #6b7485;
-      --accent: #60a5fa;
-      --accent-hover: #93bbfd;
-      --red: #f87171;
-      --orange: #fb923c;
-      --green: #4ade80;
-      --yellow: #fbbf24;
-      --hr: #2a2f3d;
-      --toggle-bg: #374151;
-      --toggle-knob: #0f1117;
-      --toggle-icon: #60a5fa;
-      --shadow: 0 1px 3px rgba(0,0,0,0.3);
-      --link: #60a5fa;
+      --bg: #141210;
+      --bg-secondary: #1e1b18;
+      --border: #2e2a24;
+      --text: #e8e4de;
+      --text-secondary: #b8b0a4;
+      --text-muted: #7a746e;
+      --accent: #e05a4a;
+      --red: #e05a4a;
+      --orange: #e8783a;
+      --yellow: #d4a017;
+      --green: #2ecc71;
     }
-
-    /* ── Reset & Base ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html {
-      font-size: 16px;
-      scroll-behavior: smooth;
-      -webkit-text-size-adjust: 100%;
-    }
-
+    html { font-size: 16px; }
     body {
-      font-family: var(--font-body);
+      font-family: var(--font-sans);
       background: var(--bg);
       color: var(--text);
       line-height: 1.7;
-      transition: background 0.3s ease, color 0.3s ease;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      padding-bottom: 80px;
     }
 
-    /* ── Top Bar ── */
+    /* ── Topbar ── */
     .topbar {
       position: sticky;
       top: 0;
       z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 24px;
       background: var(--bg);
       border-bottom: 1px solid var(--border);
-      padding: 12px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: background 0.3s ease, border-color 0.3s ease;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(8px);
     }
-
-    [data-theme="light"] .topbar { background: rgba(255,255,255,0.92); }
-    [data-theme="dark"] .topbar { background: rgba(15,17,23,0.92); }
-
     .topbar-label {
       font-family: var(--font-mono);
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--text-muted);
     }
+    .topbar-label span { color: var(--red); margin-right: 6px; }
 
-    .topbar-label span {
-      color: var(--red);
-      margin-right: 6px;
-    }
-
-    /* ── Dark Mode Toggle ── */
+    /* ── Theme Toggle ── */
     .theme-toggle {
       display: flex;
       align-items: center;
@@ -130,292 +80,126 @@
       cursor: pointer;
       user-select: none;
     }
-
     .theme-toggle-label {
       font-family: var(--font-mono);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
+      font-size: 0.65rem;
       text-transform: uppercase;
+      letter-spacing: 0.06em;
       color: var(--text-muted);
     }
-
     .toggle-track {
+      width: 42px;
+      height: 22px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 11px;
       position: relative;
-      width: 44px;
-      height: 24px;
-      background: var(--toggle-bg);
-      border-radius: 12px;
-      transition: background 0.3s ease;
-      flex-shrink: 0;
+      transition: background 0.2s;
     }
-
     .toggle-knob {
       position: absolute;
-      top: 3px;
-      left: 3px;
-      width: 18px;
-      height: 18px;
-      background: var(--toggle-knob);
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      background: var(--text-secondary);
       border-radius: 50%;
-      transition: transform 0.3s ease, background 0.3s ease;
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: transform 0.2s;
     }
+    [data-theme="dark"] .toggle-knob { transform: translateX(20px); }
+    .toggle-icon { font-size: 9px; position: absolute; }
+    .toggle-icon-moon { opacity: 0; }
+    [data-theme="dark"] .toggle-icon-sun { opacity: 0; }
+    [data-theme="dark"] .toggle-icon-moon { opacity: 1; }
 
-    [data-theme="dark"] .toggle-knob {
-      transform: translateX(20px);
-      background: var(--text);
-    }
-
-    .toggle-icon {
-      font-size: 10px;
-      line-height: 1;
-    }
-
-    [data-theme="light"] .toggle-icon-moon { display: none; }
-    [data-theme="dark"] .toggle-icon-sun { display: none; }
-
-    /* ── Article Container ── */
+    /* ── Article Layout ── */
     .article {
-      max-width: var(--max-width);
+      max-width: 760px;
       margin: 0 auto;
-      padding: 40px 24px 80px;
+      padding: 48px 24px 80px;
     }
 
     /* ── Typography ── */
-    h1 {
-      font-size: 1.65rem;
-      font-weight: 700;
-      line-height: 1.25;
-      margin-bottom: 4px;
-      letter-spacing: -0.01em;
-    }
-
-    h2 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      line-height: 1.3;
-      margin-top: 40px;
-      margin-bottom: 16px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid var(--border);
-      letter-spacing: -0.005em;
-    }
-
-    h3 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      line-height: 1.4;
-      margin-top: 28px;
-      margin-bottom: 12px;
-    }
-
-    p {
-      margin-bottom: 16px;
-      color: var(--text);
-    }
-
-    .meta {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      margin-bottom: 24px;
-      line-height: 1.8;
-    }
-
-    .meta strong {
-      color: var(--text);
+    .article h1 {
+      font-family: var(--font-mono);
+      font-size: 1.35rem;
       font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 4px;
+      line-height: 1.3;
     }
-
-    strong { font-weight: 600; }
-
-    a {
-      color: var(--link);
-      text-decoration: none;
-      word-break: break-all;
+    .article h2 {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 48px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
     }
-
-    a:hover {
-      text-decoration: underline;
+    .article h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 28px 0 10px;
     }
-
-    hr {
+    .article p {
+      margin-bottom: 16px;
+      color: var(--text-secondary);
+    }
+    .article strong { color: var(--text); font-weight: 600; }
+    .article em { font-style: italic; }
+    .article hr {
       border: none;
-      height: 1px;
-      background: var(--hr);
-      margin: 36px 0;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
     }
-
-    /* ── Lists ── */
-    ul, ol {
+    .article ul, .article ol {
       padding-left: 24px;
       margin-bottom: 16px;
+      color: var(--text-secondary);
     }
-
-    li {
-      margin-bottom: 6px;
-      line-height: 1.65;
-    }
-
-    li strong {
-      color: var(--text);
-    }
-
-    /* ── BLUF bullets ── */
-    .bluf ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .bluf li {
-      position: relative;
-      padding-left: 20px;
-      margin-bottom: 14px;
-    }
-
-    .bluf li::before {
-      content: '—';
-      position: absolute;
-      left: 0;
-      color: var(--text-muted);
-      font-weight: 600;
-    }
+    .article li { margin-bottom: 6px; }
+    .article a { color: var(--accent); text-decoration: none; }
+    .article a:hover { text-decoration: underline; }
 
     /* ── Tables ── */
-    .table-wrap {
-      overflow-x: auto;
-      margin: 20px 0;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    table {
+    .table-wrap { overflow-x: auto; margin: 20px 0; }
+    .article table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.84rem;
-      line-height: 1.55;
+      font-size: 0.88rem;
     }
-
-    thead th {
-      background: var(--bg-table-header);
-      font-weight: 600;
-      text-align: left;
-      padding: 10px 14px;
-      border-bottom: 2px solid var(--border);
-      white-space: nowrap;
-      font-size: 0.78rem;
+    .article th {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: var(--text-secondary);
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      text-align: left;
+      padding: 8px 12px;
+      border-bottom: 2px solid var(--border);
     }
-
-    tbody td {
-      padding: 10px 14px;
-      border-bottom: 1px solid var(--border-light);
+    .article td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
       vertical-align: top;
-    }
-
-    tbody tr:nth-child(even) { background: var(--bg-table-alt); }
-    tbody tr:last-child td { border-bottom: none; }
-
-    /* Status colors */
-    .status-escalating { color: var(--red); font-weight: 600; }
-    .status-stable { color: var(--yellow); font-weight: 600; }
-    .status-stable-green { color: var(--green); font-weight: 600; }
-    .status-critical { color: var(--red); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; }
-
-    /* ── Scenario Blocks ── */
-    .scenario {
-      background: var(--bg-secondary);
-      border-left: 3px solid var(--border);
-      padding: 16px 20px;
-      margin: 16px 0;
-      border-radius: 0 var(--radius) var(--radius) 0;
-    }
-
-    .scenario-a { border-left-color: var(--red); }
-    .scenario-b { border-left-color: var(--yellow); }
-    .scenario-c { border-left-color: var(--orange); }
-
-    .scenario strong:first-child {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 0.95rem;
-    }
-
-    /* ── Source Manifest ── */
-    .sources h3 {
-      font-size: 0.95rem;
-      margin-top: 24px;
-      margin-bottom: 8px;
-    }
-
-    .sources ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .sources li {
-      font-size: 0.84rem;
-      padding: 4px 0;
-      line-height: 1.6;
       color: var(--text-secondary);
     }
-
-    .sources li strong {
-      color: var(--text);
-    }
-
-    /* ── Indicators Lists ── */
-    .indicators ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .indicators li {
-      padding: 4px 0 4px 20px;
-      position: relative;
-    }
-
-    .indicators li::before {
-      content: '→';
-      position: absolute;
-      left: 0;
-      color: var(--text-muted);
-    }
-
-    /* ── Footer ── */
-    .report-footer {
-      margin-top: 48px;
-      padding-top: 24px;
-      border-top: 1px solid var(--hr);
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      font-style: italic;
-      line-height: 1.8;
-    }
-
-    /* ── Responsive ── */
-    @media (max-width: 640px) {
+    .article tr:last-child td { border-bottom: none; }
+    .article tr:hover td { background: var(--bg-secondary); }
+    @media (max-width: 600px) {
       .article { padding: 24px 16px 60px; }
-      h1 { font-size: 1.35rem; }
-      h2 { font-size: 1.15rem; }
-      table { font-size: 0.78rem; }
-      thead th, tbody td { padding: 8px 10px; }
-      .topbar { padding: 10px 16px; }
-      .theme-toggle-label { display: none; }
+      .article h1 { font-size: 1.1rem; }
+      .topbar { padding: 8px 16px; }
     }
-
-    /* ── Print ── */
-    @media print {
-      .topbar { display: none; }
-      .article { max-width: 100%; padding: 0; }
-      body { font-size: 11pt; }
-    }
-  </style>
+</style>
   
 <style>
     /* ── Archive Nav ── */
@@ -525,8 +309,8 @@
 
 <header class="topbar">
   <div class="topbar-nav">
-    <a href="2026-03-06.html">Mar 06 Report</a>
-    <div class="topbar-label"><span>●</span> SITREP — Day 8 of Conflict</div>
+    <a href="2026-03-07.html">Mar 07 Report</a>
+    <div class="topbar-label"><span>●</span> SITREP — Day 10 of Conflict</div>
   </div>
   <div class="theme-toggle" onclick="toggleTheme()" role="button" tabindex="0" aria-label="Toggle dark mode">
     <span class="theme-toggle-label">Theme</span>
@@ -540,22 +324,22 @@
 </header>
 
 <article class="article">
-<h1>SITREP-2026-03-07 | DAY 8 OF CONFLICT</h1>
+<h1>SITREP-2026-03-09 | DAY 10 OF CONFLICT</h1>
 <p><strong>CLASSIFICATION: OPEN SOURCE</strong>
 <strong>SUBJECT: US-IRAN CONFLICT — DAILY INTELLIGENCE BRIEF</strong>
-<strong>PREPARED: March 7, 2026</strong>
+<strong>PREPARED: March 9, 2026</strong>
 <strong>OPERATION NAMES: Epic Fury (US) / Roaring Lion (Israel) / True Promise IV (Iran)</strong></p>
 <hr />
 <h2>1. BLUF — Bottom Line Up Front</h2>
 <ul>
-<li><strong>Tehran's Mehrabad International Airport set ablaze</strong> in Israeli strikes overnight — 16 IRGC Quds Force aircraft destroyed on the tarmac plus Iranian fighter jets that "posed a threat to IAF aircraft." 80+ Israeli fighter jets completed the wave targeting regime infrastructure across Tehran and central Iran. US has now struck 3,000+ targets inside Iran in one week. Bessent: "Tonight will be our biggest bombing campaign."</li>
-<li><strong>Iran's command fragmentation confirmed</strong> — Pezeshkian apologized to Gulf neighbors and vowed to stop striking them. Hours later, IRGC struck Al Dhafra Air Base in UAE and Dubai International Airport was attacked by drones. Larijani accused the US/Israel of seeking "fundamental disintegration of Iran." The civilian government cannot control the IRGC — there is no single authority that can deliver a ceasefire.</li>
-<li><strong>Interceptor rationing threshold approaching</strong> — Day 10-12 (March 10-12) = THIS WEEK. UAE intercepted 121 drones Saturday alone (119 successful, 2 landed). Saudi intercepted 16 drones heading for Shaybah oil field in four waves, plus ballistic and cruise missiles at Prince Sultan Air Base. When stockpiles deplete, Gulf states must choose between defending cities, military bases, or energy infrastructure.</li>
-<li><strong>Energy crisis entering structural phase</strong> — Brent closed $92.69 Friday (+28% weekly). WTI $90.90 (+35.6% weekly — largest gain in futures history since 1983). Goldman projects $100+ next week, $147+ if Hormuz constrained through March. Kuwait began cutting oil production (storage overflow). Iraqi production down ~75%. Physical market: Platts Dubai $23 premium over derivatives. US NFP came in at -92K (vs +55K consensus) — stagflation confirmed. US gasoline $3.38, heading toward $4+.</li>
-<li><strong>Trump declares "unconditional surrender or complete collapse"</strong> — announced Phase 3 targeting expansion of "areas and groups not previously considered." $151.8M weapons sale to Israel approved (12,000 bomb bodies). Germany's Merz warned: "An endless war is not in our interest." UN chief warned violence could "spiral out of control." Iran Red Crescent: 6,668 civilian units targeted including schools, hospitals, infrastructure.</li>
+<li><strong>Mojtaba Khamenei confirmed as Iran's new Supreme Leader</strong> — the 56-year-old hardline cleric with deep IRGC ties was elected by the Assembly of Experts early Monday, making clear that Iran's hardline factions have survived 10 days of bombardment with their power structure intact. Trump warned Khamenei would be an unacceptable choice; Israel declared it would pursue any successor. The IRGC immediately pledged "full obedience" and launched new missile salvoes within hours of the announcement — a coordinated signal that the war continues at elevated intensity under Khamenei dynasty succession.</li>
+<li><strong>Oil crossed $100 for first time since 2022 — spiked to $119.50 intraday</strong> before partially retreating to ~$103 on G7 SPR discussion headlines. Brent is now ~65% above pre-war levels. Citi estimates 16 million barrels per day of supply disrupted — Rapidan Energy has declared it the "largest oil disruption in history," surpassing the 1956 Suez crisis. Trump dismissed concerns as a "very small price to pay" and explicitly ruled out SPR release. Dow futures dropped 800+ points at open; S&amp;P -1.4%, Nikkei -5.2%, Kospi triggered circuit breaker (-6% close).</li>
+<li><strong>Bapco force majeure confirms Gulf energy cascade</strong> — Bahrain's state oil company Bapco Energies declared force majeure on its 405,000 b/d Sitra refinery complex after overnight Iranian drone strikes caused fires and civilian casualties (32 injured including children). The IRGC warned: "If you can tolerate oil at more than $200 per barrel, continue this game." Qatar's energy minister al-Kaabi: all Gulf exporters will declare force majeure "within days" if conflict continues. Chain of cascading shutdowns now confirmed as structural, not episodic.</li>
+<li><strong>IRGC's 31-unit decentralization structure now public intelligence</strong> — The Economist published analysis revealing Iran reorganized into 31 autonomous military units, each with absolute independent command authority, with Basij cells split into cells of five. This architecture makes a centralized ceasefire mechanically impossible — no single authority, including Mojtaba Khamenei, can order all units to stop simultaneously. This is the most consequential strategic revelation of the conflict: the war will continue regardless of political will at the top.</li>
+<li><strong>Special forces / uranium seizure mission under active discussion</strong> — Bloomberg reports Trump is contemplating a special forces mission to enter Iran and physically seize near-weapons-grade highly enriched uranium (441 kg HEU). Simultaneously, Israeli senior officer stated Israel needs "three more weeks" to accomplish its objectives. Hegseth has suggested the campaign could run "as long as eight weeks." The gap between US war termination framing and Israeli operational timeline is the emerging primary strategic risk — a US-Israel divergence that could fracture the coalition.</li>
 </ul>
 <h3>BATTLEFIELD STATUS GRID</h3>
-<p><strong>Legend:</strong> <span class="status-combat"><span class="status-combat">🔴 Active combat</span></span> / escalating · <span class="status-under-attack">🟠 Under attack</span> / high risk · <span class="status-tense">🟡 Tense</span> / defensive posture · <span class="status-stable">🟢 Stable</span> / minimal direct threat</p>
+<p><strong>Legend:</strong> <span class="status-combat">🔴 Active combat</span> / escalating · <span class="status-under-attack">🟠 Under attack</span> / high risk · <span class="status-tense">🟡 Tense</span> / defensive posture · <span class="status-stable">🟢 Stable</span> / minimal direct threat</p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -567,153 +351,157 @@
 <tbody>
 <tr>
 <td><strong>Iran</strong></td>
-<td><span class="status-combat"><span class="status-combat">🔴 Active combat</span></span></td>
-<td>Mehrabad Airport ablaze. 3,000+ US targets struck. Phase 3 announced. 1,332+ dead (Red Crescent). 6,668 civilian units hit. Internet blackout + "fifth column" crackdown — citizens warned against photographing strike sites.</td>
+<td><span class="status-combat">🔴 Active combat</span></td>
+<td>Mojtaba Khamenei named Supreme Leader — hardline continuity confirmed. IRGC pledged "full obedience" and launched new missile salvoes within hours. Karaj, Shahran, Aghdasieh, Shahr-e Rey oil depots struck by Israel. Tehran residents reported oily black rain Sunday. Internet blackout ongoing. 1,230+ killed (Red Crescent).</td>
 </tr>
 <tr>
 <td><strong>Israel</strong></td>
-<td><span class="status-combat"><span class="status-combat">🔴 Active combat</span></span></td>
-<td>80+ jets in latest Tehran wave. $151.8M bomb sale approved. Iranian missiles/drones still reaching Tel Aviv. Hezbollah clashes in Bekaa Valley — 4 Israeli helicopters infiltrated from Syria direction.</td>
+<td><span class="status-combat">🔴 Active combat</span></td>
+<td>Wide-scale strikes on Iranian regime targets, command centers, IRGC aerospace HQ, multiple missile launch sites. Lebanon ground operations deepening: first Israeli soldier deaths in Lebanon (2 KIA Sunday in southern Lebanon). White phosphorus use in Lebanon confirmed by HRW. Netanyahu: seeks to "destabilize the regime and enable change."</td>
 </tr>
 <tr>
 <td><strong>USA</strong></td>
-<td><span class="status-combat"><span class="status-combat">🔴 Active combat</span></span></td>
-<td>3,000+ targets struck. Bessent: "biggest bombing campaign tonight." NFP -92K = stagflation. $3.7bn cost in 100 hours. US consulate Karachi closed. Embassy Kuwait closed.</td>
+<td><span class="status-combat">🔴 Active combat</span></td>
+<td>7th service member killed (Sgt. Benjamin Pennington, 26, Prince Sultan AB). Special forces uranium seizure under discussion. Trump: war end will be "mutual" with Netanyahu. State Dept ordered non-emergency staff departure from Saudi Arabia. 32,000+ Americans evacuated from region.</td>
 </tr>
 <tr>
 <td><strong>Lebanon</strong></td>
-<td><span class="status-combat"><span class="status-combat">🔴 Active combat</span></span></td>
-<td>217+ killed. 330,000+ displaced. Hezbollah clashing with IDF in Bekaa Valley. Iranian "command center" in Beirut struck by IDF. B-1 bomber deployed to UK airbase for operations.</td>
+<td><span class="status-combat">🔴 Active combat</span></td>
+<td>397+ killed, 517,000+ displaced. Lebanese parliament extended its term by 2 years. IDF struck Hezbollah targets in Dahiyeh (Beirut), Bekaa Valley. HRW confirmed Israeli white phosphorus use in southern Lebanon. 5 Iranian IRGC commanders in Lebanon killed.</td>
 </tr>
 <tr>
 <td><strong>Saudi Arabia</strong></td>
 <td><span class="status-under-attack">🟠 Under attack</span></td>
-<td>16 drones intercepted heading for Shaybah oil field (four waves). Ballistic + cruise missiles at Prince Sultan Air Base intercepted. Drones east of Riyadh. Third consecutive day of Al-Kharj targeting.</td>
+<td>Shaybah oilfield struck again (drones intercepted). Residential strike in Al-Kharj: 2 Bangladeshi nationals killed. Prince Sultan AB targeted again. State Dept ordered non-emergency diplomatic departure. Saudi FM reiterated "full right to take all necessary measures."</td>
 </tr>
 <tr>
 <td><strong>UAE</strong></td>
 <td><span class="status-under-attack">🟠 Under attack</span></td>
-<td>121 drones detected Saturday — 119 intercepted, 2 landed. IRGC struck Al Dhafra Air Base after Pezeshkian's apology. Dubai airport attacked by drones. Limited flights resumed then suspended again.</td>
+<td>Fujairah oil storage facility fire from drone debris — contained. Air defenses responding to fresh missile and drone threats Monday. Dubai Parks closed. Lufthansa/Air France extended flight suspensions to March 15. 1,400+ missiles and drones have struck UAE since war began (MOD).</td>
+</tr>
+<tr>
+<td><strong>Bahrain</strong></td>
+<td><span class="status-new">🔴 NEW ESCALATION</span></td>
+<td>Bapco Energies declared force majeure on 405,000 b/d Sitra refinery. Sitra residential area struck: 32 injured including children. Maameer oil facility fire active. Sirens activated Monday.</td>
 </tr>
 <tr>
 <td><strong>Kuwait</strong></td>
 <td><span class="status-under-attack">🟠 Under attack</span></td>
-<td>Embassy closed. Oil production CUTS BEGUN — storage overflow. Active intercepts ongoing.</td>
+<td>Two interior ministry officers killed. Oil production cuts continuing. TKSC (Kuwait) declared force majeure on petrochemicals. Embassy personnel status elevated.</td>
 </tr>
 <tr>
 <td><strong>Qatar</strong></td>
 <td><span class="status-under-attack">🟠 Under attack</span></td>
-<td>Fresh explosions in Doha. 9 of 10 drones intercepted Friday. Partial air navigation resumed — limited repatriation flights Saturday.</td>
-</tr>
-<tr>
-<td><strong>Bahrain</strong></td>
-<td><span class="status-under-attack">🟠 Under attack</span></td>
-<td>Loud explosions Saturday — unclear if impacts or interceptions. Hotel, residential buildings, oil refinery previously struck. GCC Gulf Shield deployed.</td>
+<td>~12 explosions early Monday — threat subsided. Ballistic missiles intercepted by armed forces. Qatar FM condemned Saudi residential strike. Al-Kaabi (energy minister): all Gulf exporters will declare FM "within days."</td>
 </tr>
 <tr>
 <td><strong>Iraq</strong></td>
 <td><span class="status-under-attack">🟠 Proxy battlefield</span></td>
-<td>Production down ~75%. PMF militias claiming 16+ daily ops vs. US. Massive drone strikes on Erbil. US strikes on PMF forces ongoing.</td>
+<td>PMF militias claiming 16+ daily operations. US Embassy Baghdad helicopter pad hit by rocket. Hotel in Suleimaniyah (used by UN) struck. Kurdish Komala base hit (1 KIA). Massive Erbil strikes ongoing. Iraqi government pledged to arrest militia members.</td>
 </tr>
 <tr>
 <td><strong>Oman</strong></td>
 <td><span class="status-tense">🟡 Tense</span></td>
-<td>Primary evacuation hub. Mediator role active.</td>
+<td>Drone attacks testing Oman's bid as Hormuz bypass route. Mediator role strained.</td>
 </tr>
 <tr>
 <td><strong>Turkey</strong></td>
 <td><span class="status-tense">🟡 Tense</span></td>
-<td>Considering sending F-16s to protect Cyprus/Northern Cyprus. NATO missile intercept in eastern Med. Border with Iran suspended.</td>
+<td>NATO intercepted a ballistic missile that entered Turkish airspace (AP confirmed). Turkey considering F-16 deployment to Cyprus. Spain barred US planes from jointly-operated Andalusia bases.</td>
 </tr>
 <tr>
 <td><strong>Azerbaijan</strong></td>
 <td><span class="status-under-attack">🟠 Under attack</span></td>
-<td>Iranian drones hit territory. First non-coalition, non-Gulf state attacked.</td>
+<td>Iranian drones previously hit territory. Non-coalition, non-Gulf state status elevated.</td>
 </tr>
 <tr>
 <td><strong>Pakistan</strong></td>
-<td>🟠 NEW — activated</td>
-<td>Army chief met Saudi defense minister under mutual defense pact. 24 killed at US consulate protests. Nuclear state entering conflict framework.</td>
+<td><span class="status-under-attack">🟠 Activated</span></td>
+<td>Army chief met Saudi defense minister under mutual defense pact. Nuclear state framework active.</td>
 </tr>
 <tr>
-<td><strong>Jordan</strong></td>
-<td><span class="status-tense">🟡 Tense</span></td>
-<td>Interceptions ongoing.</td>
-</tr>
-<tr>
-<td><strong>Cyprus</strong></td>
-<td><span class="status-tense">🟡 Tense</span></td>
-<td>Turkey considering F-16 deployment. RAF Akrotiri used for US/UK ops.</td>
+<td><strong>Lebanon (Parliament)</strong></td>
+<td><span class="status-combat">🔴 Active combat</span></td>
+<td>Parliament extended its own term by 2 years — political normality suspended indefinitely.</td>
 </tr>
 <tr>
 <td><strong>Strait of Hormuz</strong></td>
 <td><span class="status-critical">🔴 CRITICAL</span></td>
-<td>Day 8 of near-standstill. Only Iran-linked sanctioned vessels transiting. ~500 tankers stuck. Insurance withdrawn. Force majeure cascade underway.</td>
+<td>Day 10 of near-standstill. Iran: "will not give up control until desired results achieved." Kpler: $150/bbl if Hormuz stays closed to end of March. Only Iran-linked sanctioned vessels transiting. ~500 tankers stuck.</td>
 </tr>
 </tbody>
 </table></div>
 <hr />
 <h2>2. MILITARY OPERATIONS</h2>
-<p><strong>Coalition Campaign — Intensifying:</strong>
-US has struck 3,000+ targets inside Iran in one week (CENTCOM). Israel deployed 80+ fighter jets in the latest wave, striking regime infrastructure, missile launchers, and military sites across Tehran and central Iran. Mehrabad International Airport set ablaze — 16 IRGC Quds Force aircraft destroyed (used for weapons/cash transfers to proxies) plus Iranian fighter jets. Several civilian aircraft including a Boeing 747 also hit on the tarmac.</p>
-<p>Trump announced Phase 3 targeting: "areas and groups of people not previously considered for targeting" under "serious consideration for complete destruction and certain death." Demanded "UNCONDITIONAL SURRENDER or completely collapse." Bessent confirmed Friday night would be the "biggest bombing campaign" yet. $151.8M weapons sale to Israel approved — 12,000 x 1,000-lb bomb bodies.</p>
-<p><strong>Iranian Red Crescent damage report (March 7):</strong> 6,668 civilian units targeted including schools, hospitals, and infrastructure. 1,332+ killed. UNICEF confirmed 181+ children killed. Second week of strikes now underway with no signs of slowing.</p>
-<p><strong>Iran's Command Fragmentation — Confirmed:</strong>
-Pezeshkian delivered a televised address apologizing to Gulf neighbors and vowing to stop striking them. Hours later, IRGC navy drone unit struck Al Dhafra Air Base in UAE. Dubai International Airport attacked by drones. Strikes continued in Bahrain and Qatar during his conciliatory speech. This confirms the mosaic defense doctrine: decentralized IRGC units operate independently. Pezeshkian cannot deliver a ceasefire even if he wants to. IRGC consolidating under hardliner General Vahidi (who built Hezbollah). Ministry of Intelligence warned against "fifth column" — citizens photographing strike sites will be "severely punished."</p>
-<p><strong>Lebanon — Second Front Deepening:</strong>
-217+ killed, 330,000+ displaced. Hezbollah confirmed its fighters clashed with Israeli troops in the Bekaa Valley after observing "four Israeli enemy army helicopters from the Syrian direction." IDF struck an Iranian "command center" in Beirut. B-1 bomber deployed to UK airbase (RAF Fairford) for operations after UK authorized use of bases.</p>
-<p><strong>Russia — Exploiting Distraction:</strong>
-Putin spoke with Pezeshkian, offering condolences while reportedly providing Iran with intelligence on US military positions. Russia launched 480 drones + 29 missiles at Ukraine in massive barrage, targeting energy infrastructure. Same Shahed drones used against both Ukraine and Gulf states = two-theater weapons pipeline. Ukraine negotiations paused. Kremlin: "significant increase in demand" for Russian energy.</p>
+<p><strong>Coalition Campaign — New Phase (Energy Targeting):</strong>
+Israel launched "wide-scale" strikes on Iranian regime targets in Tehran and "additional areas" on Sunday, including IRGC aerospace force headquarters and multiple command centers and missile launch sites. The energy infrastructure campaign that began Friday-Saturday has now destroyed or damaged oil storage depots in Karaj, Shahran, Aghdasieh, and Shahr-e Rey (all in and around Tehran). CNN teams in Tehran reported oily, blackened rain falling on the city Sunday morning — visible evidence of the scale of fuel facility fires. A senior Iranian official described the strikes as the opening of a "new phase" of the war.</p>
+<p>Trump stated he has not yet decided whether to strike Iran's nuclear facilities or oil export infrastructure directly. Energy Secretary Chris Wright told CNN the US does not plan to strike Iranian energy infrastructure — but confirmed the Israeli strikes on Iranian oil depots were partially unexpected in scope, with CNN reporting some Trump administration officials "surprised" by the breadth of the weekend strikes and concerned about the political implications of rising energy costs ahead of midterms.</p>
+<p>Hegseth suggested the campaign could run "as long as eight weeks." A senior Israeli military officer (speaking anonymously) told NPR that Israel needs "three more weeks" to accomplish its objectives — setting up a potential divergence between US political timelines and Israeli operational needs.</p>
+<p><strong>Uranium Seizure Mission Under Discussion:</strong>
+Bloomberg reports Trump is actively contemplating a special forces mission to physically enter Iran and seize approximately 441 kg of highly enriched uranium (HEU) — only a short technical step from weapons-grade — which was reportedly moved to undisclosed locations before the June 2025 US nuclear strikes. If confirmed, this would represent a major escalation beyond airstrikes into ground combat on Iranian soil. The mission has reportedly not been ordered.</p>
+<p><strong>Lebanon — Ground War Expanding:</strong>
+IDF confirmed first soldier deaths in Lebanon — two killed Sunday in southern Lebanon as fighting deepened. Israeli forces struck Hezbollah targets in Dahiyeh (Beirut's southern suburbs) and the Bekaa Valley. Human Rights Watch confirmed Israel used white phosphorus in residential areas of southern Lebanon, a violation of international humanitarian law. IDF killed five IRGC commanders based in Lebanon. Lebanese parliament voted to extend its own term by two years, indicating civilian government has effectively suspended normal political operations for the duration.</p>
+<p><strong>IRIS Dena Sinking Confirmed:</strong>
+Iran confirmed 104 crew killed and 32 wounded in the US strike on the Iranian warship IRIS Dena in the Indian Ocean last week. The vessel sinking has been acknowledged by both sides with contested narrative about whether the ship was armed.</p>
 <hr />
 <h2>3. IRANIAN RETALIATION — STATUS</h2>
-<p>Iran's launch capacity continues declining but Gulf targeting has INTENSIFIED against energy infrastructure:</p>
+<p>Iran's ballistic missile stocks are severely degraded but drone and medium-range strike capacity continues:</p>
 <ul>
-<li><strong>Ballistic missiles:</strong> Down 90% from Day 1 (CENTCOM). Iran conserving remaining stock — likely waiting for interceptor rationing phase.</li>
-<li><strong>Drones:</strong> Down 83% from Day 1 but drones remain the primary weapon. UAE intercepted 121 in one day. Multi-wave attacks on Shaybah oil field (16 drones in four waves Saturday alone).</li>
-<li><strong>Saudi production targeting SUSTAINED:</strong> Shaybah (1M bbl/day super-giant field) hit repeatedly across multiple days. Prince Sultan Air Base targeted with ballistic + cruise missiles. Drones east of Riyadh. Third consecutive day of Al-Kharj targeting.</li>
-<li><strong>Command fragmentation = unpredictable strikes:</strong> IRGC struck Al Dhafra (UAE) and Dubai airport despite Pezeshkian's public ceasefire pledge to neighbors.</li>
-<li><strong>Residual Israel capability:</strong> Missiles reached Tel Aviv Saturday. At least five ballistic missile launches detected toward Israel since midnight.</li>
+<li><strong>New IRGC missile launches:</strong> Hours after Mojtaba Khamenei's appointment, IRGC released video of Khorramshahr, Fatah, Khyber, and Qadr missiles being fired — a public signal that succession means escalation, not moderation. CNN could not independently verify these specific launches.</li>
+<li><strong>Gulf targeting: energy infrastructure phase confirmed.</strong> Bapco Sitra (Bahrain, 405,000 b/d) struck and declared FM. Fujairah UAE oil facility struck. Shaybah (Saudi) repeatedly targeted. Al-Kharj residential area (Saudi) struck, 2 killed. Qatar midnight missile intercept.</li>
+<li><strong>IRGC warning threshold crossed:</strong> IRGC spokesman Zolfaghari warned that if US/Israel continues attacking Iranian energy facilities, Iran will conduct "similar actions in the region" — confirming tit-for-tat energy infrastructure doctrine.</li>
+<li><strong>Iraq proxies:</strong> US Embassy Baghdad helicopter pad struck by rocket. Erbil hotel, UN facility in Suleimaniyah, Komala base struck. Islamic Resistance in Iraq claiming 16+ daily operations.</li>
+<li><strong>Hormuz control claim:</strong> A senior Iranian official stated Iran "will not give up control of the Strait of Hormuz until it achieves its desired results." No timeline given. Near-total shipping standstill continues.</li>
+<li><strong>31-Unit Decentralization (NEW CONFIRMED STRUCTURE):</strong> The Economist reported that Iran reorganized the IRGC into 31 autonomous units with absolute independent command authority, and the Basij into cells of five (hundreds of thousands of weapons distributed). This insurgency-ready posture means that even killing Mojtaba Khamenei will not halt operations — each node continues independently.</li>
 </ul>
 <hr />
 <h2>4. CRITICAL INFRASTRUCTURE &amp; ENERGY</h2>
-<p><strong>INTERCEPTOR CRISIS — THIS WEEK:</strong>
-The 10-12 day rationing threshold hits March 10-12 (Day 10-12). UAE ordered ~1,000 PAC-3 over 15 years. Global production: 600 PAC-3/year, 96 THAAD/year. Doctrine requires 2 interceptors per incoming. Iran already destroyed a $300M TPY-2 radar (THAAD component). US denied German interceptor request for Ukraine — Middle East campaign "denuding US forces in Pacific." When rationing begins, Gulf states must triage: defend cities, military bases, OR energy infrastructure. Iran's 86% launch rate decline is likely a conservation strategy — save missiles for when interception rates drop, then launch overwhelming salvoes.</p>
-<p><strong>Energy Market — Structural Crisis:</strong>
-- <strong>Brent:</strong> $92.69 (+28% weekly). <strong>WTI:</strong> $90.90 (+35.6% weekly — largest gain in futures history since 1983).
-- Goldman: $100+ next week. If Hormuz constrained through March: prices "likely exceed 2008/2022 peaks" ($147 Brent, $5/gal gasoline).
-- Platts Dubai: <strong>$23/bbl premium</strong> over OTC derivatives (up from $1 pre-war). Physical market pricing ~$110+ effective.
-- Brent prompt spread: <strong>$5.11 backwardation</strong> (from $0.58 one month ago).
-- European diesel: +50% weekly (record). US gasoline: $3.38 (+13% since war, fastest since March 2022).
-- Kuwait CUTTING OIL PRODUCTION — storage overflow. Iraq down ~75%.
-- Only 9 empty VLCCs remain in Persian Gulf. ~500 oil/gas tankers stuck in surrounding waters.
-- Container bookings for Gulf ports: <strong>-81% in two days.</strong> India's Nhava Sheva port: 10% → 64% congestion in 6 days.</p>
-<p><strong>Force Majeure Cascade Active:</strong>
-Qatar's al-Kaabi: ALL Gulf exporters declaring force majeure within days. Ras Laffan restart: "weeks to months" post-ceasefire. $150/bbl in 2-3 weeks if Hormuz stays closed. Gas could hit $40/mmBtu. Qatar's 128-vessel LNG fleet scattered — only 6-7 available.</p>
-<p><strong>Policy Tools Exhausted:</strong>
-SPR depleted + release refused. IEA declining collective action. DFC $20B insurance lacks credibility. Administration "discussed and dismissed" trading oil futures directly. API CEO Sommers: only military reopening of Hormuz will stabilize prices, all other options "marginal." Only Russia sanctions easing has meaningful scale (Bessent: India waiver issued, more indicated) but faces political incoherence (Russia providing Iran targeting intel + 480-drone barrage on Ukraine simultaneously).</p>
-<p><strong>NFP Confirms Stagflation:</strong>
-February NFP: <strong>-92K</strong> (vs. +55K consensus). Unemployment 4.4%. Participation rate lowest since 2021. Pre-war labor weakness + energy shock = classic stagflation trap. Fed paralyzed: can't cut (inflation), can't hike (jobs). ECB now pricing rate HIKE in 2026 — complete reversal from prior consensus.</p>
+<p><strong>Oil — Historic Threshold Crossed:</strong>
+Brent crude spiked to $119.50/bbl intraday Monday — the highest level since 2022 — before G7 emergency call headline pulled it to approximately $103. WTI similarly spiked to near $120 then settled ~$100-101. Brent is now ~65% above pre-war ($73/bbl on Feb 28). According to Kpler's Homayoun Falakshahi, oil could reach $150/bbl by end of March if Hormuz traffic does not resume. IRGC explicitly threatened "$200/bbl" if strikes on Iranian energy continue.</p>
+<p>Citi has estimated 16 million barrels per day of supply has been disrupted — approximately 16% of world supply. Rapidan Energy declared this the "largest oil disruption in history," explicitly surpassing the 1956 Suez crisis. Saudi Arabia has diverted shipments to the Red Sea at record levels, but that route remains exposed to potential Houthi escalation.</p>
+<p>US gasoline reached $3.45/gallon on Sunday (AAA), up 16% from the prior week — the fastest weekly surge since early 2022. A second-wave price increase is expected across price-cycling states (Michigan, Indiana, Ohio, Kentucky, Texas, Florida).</p>
+<p><strong>Force Majeure Cascade — Structural Phase:</strong>
+Bapco Bahrain (405,000 b/d) declared force majeure Monday. Kuwait's TKSC declared FM on petrochemicals. Thai refineries declared FM. China's CNOOC raised naphtha prices after cracker halt. China's Wanhua declared FM on supplies to Middle East. Vietnam curbing crude exports to meet local demand. Australia fuel rationing active. Bangladesh closed universities to conserve electricity. Qatar's al-Kaabi: all Gulf exporters will follow "within days." This is no longer episodic FM — it is a structural cascade with no recovery timeline.</p>
+<p><strong>G7 Emergency Response — SPR Discussion:</strong>
+G7 finance ministers convened via video conference Monday afternoon. French President Macron confirmed SPR use is "an envisaged option" and said G7 leaders could meet this week via call/video conference. French FM holds G7 presidency. MCC intelligence (R#19) estimates OECD holds approximately 1.2 billion barrels across strategic reserves — approximately 75 days of the displaced volume. The G7 SPR headline alone pulled Brent $19 off its intraday peak, confirming markets remain highly responsive to even discussion of coordinated release. However, SPR is a bridge, not a solution — it does not reopen Hormuz.</p>
+<p><strong>Interceptor Crisis — AT THRESHOLD:</strong>
+The MCC 10-12 day rationing threshold arrives today (Day 10). Patriots are physically departing South Korea — C-5/C-17 aircraft observed at Osan — South Korea providing approximately 30 interceptors to UAE. This transfer creates a North Korea deterrence gap. Global production remains ~600 PAC-3/year, 96 THAAD/year against current consumption rates. When Gulf states begin triage, Iran's conservation strategy — holding remaining ballistic missile stocks until interception rates degrade — becomes a mass-saturation threat.</p>
+<p><strong>Markets:</strong>
+- Dow: -700 points at open (-1.7%). S&amp;P -1.4%. Nasdaq -1.3%.
+- Nikkei: -5.2%. Kospi: -6% (triggered circuit breaker, second since last week — worst weekly loss since March 2020). Stoxx 600: -2%. DAX: -2.5%. FTSE 100: -1.5%.
+- Brent: ~$103-112 range (intraday high $119.50). WTI: ~$100-101.
+- European gas: +30% weekly. Asian LSFO prices spiking on supply fears.
+- Saxo Markets strategist Neil Wilson: "Complacency has been replaced by a degree of panic because the market is now pricing in a more sustained hit to energy and trade flows."
+- Lufthansa and Air France extended Middle East flight suspensions to March 15.</p>
 <hr />
 <h2>5. HUMANITARIAN IMPACT</h2>
-<p><strong>Iran:</strong> 1,332+ killed (Red Crescent). 6,668 civilian units targeted. UNICEF: 181+ children killed. Mehrabad Airport ablaze. Schools, hospitals struck. Tehran experiencing heaviest sustained bombardment. Internet blackout. Regime cracking down on citizens sharing footage. Qarchak women's prison: staff abandoning posts. Authorities jamming satellite TV signals.</p>
-<p><strong>Israel:</strong> Missiles reaching Tel Aviv Saturday. 11+ killed since conflict began. Continuous shelter orders.</p>
-<p><strong>Lebanon:</strong> 217+ killed, 330,000+ displaced. Dahiyeh-wide evacuation order. Hezbollah clashes in Bekaa Valley escalating.</p>
-<p><strong>Gulf States:</strong> UAE: 2 drones landed Saturday (of 121 detected). Saudi: Shaybah under sustained attack. Fresh explosions across Bahrain, Qatar, Abu Dhabi Saturday night. Pakistan: 24 killed at US consulate protests.</p>
-<p><strong>Global:</strong> 56% of Americans oppose the war. Asia humanitarian fuel crisis: India LPG +7% (222M households), Thai diesel queues, Philippines shortened work weeks, Pakistan textile standstill, Singapore rationing bunker fuel.</p>
+<p><strong>Iran:</strong> 1,230+ killed (Red Crescent). Likely undercount given HRANA (US-based monitoring group) estimates 1,205 civilian deaths including 194 children as of March 7, before the weekend's intensification. Qarchak women's prison staff still abandoning posts. Oily black rain over Tehran from fuel depot fires. Citizens warned against sharing footage. Satellite TV jamming active. Nationwide allegiance ceremony to Mojtaba Khamenei organized for Monday.</p>
+<p><strong>Iran school strike — congressional escalation:</strong> Senate Democrats (Schatz, Murray, Shaheen, Reed, Warner, Coons) issued a joint statement calling the February 28 strike on a girls' elementary school in Minab, southeastern Iran "horrifying" — citing independent analysis (NPR satellite imagery, Bellingcat geolocation) that between 165-180 people were killed, most of them children, and that the strike was consistent with a US precision strike on a nearby military compound. Hegseth: "still investigating." Trump had previously blamed Iran. The gap between administration statements and independent evidence is a growing domestic political liability.</p>
+<p><strong>Israel:</strong> 13 dead (including first soldier deaths in Lebanon — 2 Sunday). Continuous missile/rocket alerts. Iranian missiles and drone debris falling in multiple areas.</p>
+<p><strong>Lebanon:</strong> 397+ killed, 517,000+ displaced. HRW white phosphorus confirmation. Parliament extended its term by 2 years (effectively declaring political emergency). Full-country evacuation orders from IDF for Dahiyeh.</p>
+<p><strong>Gulf:</strong> 32 civilians injured in Sitra (Bahrain) including children. 2 Bangladeshi nationals killed in Al-Kharj (Saudi). Iran has launched 1,400+ missiles and drones against UAE alone since war began (UAE MOD). Iranian women's soccer team in Australia refusing to return — Trump offered asylum.</p>
+<p><strong>Global:</strong> Kpler: $150/bbl likely by end of March if Hormuz closed. Vietnam diesel +57%. Indian LPG surge. Bangladesh university closures (electricity conservation). Thai diesel queues. Australia fuel rationing. Philippines shortened work weeks. Pakistan record fuel hike. Canada: 110,000 registered through overseas registration system, 5,200 requesting government assistance.</p>
 <hr />
 <h2>6. DIPLOMATIC &amp; POLITICAL</h2>
-<p><strong>Trump:</strong> "No deal except unconditional surrender." Phase 3 targeting expansion. Demands role in selecting Iran's next leader. Mojtaba Khamenei "unacceptable." Supports Kurdish offensive ("I'd be all for it"). $151.8M bomb sale to Israel approved.</p>
-<p><strong>Iran:</strong> Pezeshkian apologized to Gulf neighbors — contradicted by simultaneous IRGC strikes. Araghchi: "No reason to negotiate." Larijani: US/Israel seeking "fundamental disintegration of Iran." Mojtaba Khamenei reportedly survived strike. Clerics urging swift election of new Supreme Leader. IRGC consolidated under hardliner Vahidi.</p>
-<p><strong>International:</strong> Germany's Merz: "An endless war is not in our interest." UN chief: violence could "spiral out of control." China dispatching envoy Zhai Jun. Italy sent defensive weapons but called attack "violation of international law." UK authorized bases for US ops — B-1 bomber deployed. Turkey considering F-16s for Cyprus. Pakistan-Saudi mutual defense pact activated (nuclear state). Russia playing all sides — offering condolences while providing targeting intel and launching 480-drone barrage on Ukraine.</p>
-<p><strong>Ceasefire probability: 5% and declining.</strong> No single authority in Iran can commit to ceasefire. Trump demands unconditional surrender. Phase 3 = total war. IRGC hardliner consolidation rules out moderation. Mosaic defense doctrine = war continues regardless of political will.</p>
+<p><strong>Trump:</strong> Characterized $100+ oil as a "very small price to pay" for ending the nuclear threat. Added "ONLY FOOLS WOULD THINK DIFFERENTLY!" on Truth Social. Rejected SPR release. Told Times of Israel that war termination will be "mutual" with Netanyahu — "I'll make a decision at the right time." Reacted to Mojtaba Khamenei with "we'll see what happens." Offered asylum to Iranian women's soccer team. Earlier warned Khamenei's son would be "unacceptable" as leader — offered no follow-up to that threat.</p>
+<p><strong>Iran:</strong> Mojtaba Khamenei (56) named third Supreme Leader since 1979. Has IRGC ties since Iran-Iraq War. Never held official government position. Has not spoken publicly since war began. IRGC and hardliners quickly rallied. Larijani: younger Khamenei "can handle this situation." Assembly of Experts convened under ongoing airstrikes — a deliberate act of institutional defiance. FM Araghchi on NBC "Meet the Press": Iran must "continue fighting for the sake of our people." Araghchi on social media: dubbed the campaign "Operation Epic Mistake," gloated that all commodities are "skyrocketing," warned "we, too, have many surprises in store." Civilian government (Pezeshkian) is functionally irrelevant — confirmed by simultaneous IRGC strikes whenever he has attempted conciliation.</p>
+<p><strong>International:</strong>
+- <strong>G7:</strong> Finance ministers meeting Monday via video. Macron confirmed SPR "envisaged." France holds G7 presidency. Leaders may confer this week.
+- <strong>Russia:</strong> AP sources confirmed Russia is providing Iran intelligence supporting attacks on US military positions. Russia also launched 480+ drones at Ukraine over the weekend — active in both theaters simultaneously.
+- <strong>US-Russia paradox:</strong> Democrats (Gallego, Liccardo) sent letter to Bessent calling Russia India waiver "dangerous, self-defeating, and indefensible" given Russia's simultaneous intelligence provision to Iran targeting US troops.
+- <strong>UK:</strong> Authorized RAF bases for "defensive" US operations. B-1 bomber at RAF Fairford.
+- <strong>Spain:</strong> Barred US military planes from jointly-operated Andalusia bases. Trump threatened to "cut off all trade with Spain."
+- <strong>China:</strong> Directing oil refiners to pause fuel exports, prioritizing domestic needs. Envoy Zhai Jun active.
+- <strong>Israel-US divergence:</strong> Israeli military officer: needs "three more weeks." Hegseth: "as long as eight weeks." Trump: "mutual" decision with Netanyahu. These timelines and decision-making frameworks are not aligned — the primary structural risk to coalition cohesion.</p>
+<p><strong>Ceasefire probability: 5% floor — structurally locked.</strong> 31-unit decentralization makes centralized ceasefire mechanically impossible. Mojtaba Khamenei appointment signals hardline continuity. Trump unconditional surrender demand unchanged. IRGC pledged full obedience and immediately launched missiles post-appointment. Venezuela exit model has failed (no pre-arranged successor, no exit mechanism per Rachman/FT). Only external variable that could shift probability is SPR-linked temporary oil price relief creating US political pressure — assessed as insufficient given current framing.</p>
 <hr />
 <h2>7. PREDICTIVE ANALYSIS — NEXT 48 HOURS</h2>
-<p><strong>Scenario A: Interceptor Crisis Begins / Energy Spike (60%)</strong>
-Interceptor rationing threshold hits March 10-12. Gulf states begin forced triage. Iran's conserved missile stocks target Saudi production facilities when interception rates drop. If Shaybah (1M bbl/day) penetrated, crude gaps $20+ immediately. Brent pushes toward $100+. Phase 3 bombing campaign intensifies. Force majeure declarations cascade. Lebanon ground war deepens.</p>
-<p><strong>Scenario B: Pezeshkian Signal Creates Diplomatic Opening (15%)</strong>
-Pezeshkian's apology to Gulf neighbors, despite being contradicted by IRGC, may represent a genuine attempt to create separation between civilian government and military. If China's Zhai Jun engages with Pezeshkian faction, a "neighbor ceasefire" (stopping Gulf strikes while continuing Israel/US retaliation) could emerge. Oil pulls back $5-10 on the signal alone. Structurally unlikely to hold given IRGC autonomy.</p>
-<p><strong>Scenario C: Catastrophic Escalation — Production Hit / Pakistan Nuclear / Ground War (25%)</strong>
-Saudi production facility penetrated after interceptor depletion. Pakistan activates military under mutual defense pact (nuclear dimension). Kurdish ground offensive launches. Bushehr nuclear area struck. Trump Phase 3 targeting hits civilian/population centers. Iran retaliates against Gulf energy infrastructure en masse. Oil spikes past $120. Global recession trigger.</p>
+<p><strong>Scenario A: Interceptor Rationing Begins / Oil Crisis Deepens (55%)</strong>
+Day 10-12 interceptor threshold activates this week. Gulf states begin triage decisions between defending cities, military bases, and energy infrastructure. Iran's conserved ballistic missiles — held back as launch rates declined 90% from Day 1 — now used in mass saturation attacks against degraded defenses. A penetrating strike on Shaybah (1M bbl/day), Ras Tanura (7M bbl/day export capacity), or another major Saudi facility pushes Brent above $120 on a sustained basis. G7 SPR discussions fail to produce coordinated release in time. Force majeure cascade extends to Qatar LNG within 72 hours. Lebanon ground war deepens with Hezbollah opening second front. Uranium seizure mission planning accelerates but does not yet execute.</p>
+<p><strong>Scenario B: G7 SPR Release / Temporary Pressure Relief (25%)</strong>
+G7 leaders convene this week and authorize coordinated SPR release from the OECD's 1.2 billion barrel reserve. The announcement alone pulls Brent $15-20 lower (as the G7 headline already demonstrated on Monday). Markets stabilize temporarily. This does not reopen Hormuz, does not stop force majeure cascade, and does not create a ceasefire pathway — but it compresses the energy panic premium and reduces immediate political pressure on coalition members. Window: 2-3 weeks of tactical relief while Hormuz remains effectively closed. Scenario B does not prevent Scenario A's interceptor crisis from maturing — it only changes the oil price context.</p>
+<p><strong>Scenario C: Escalation Breakpoints — Special Forces / Nuclear / Gulf War Entry (20%)</strong>
+Trump authorizes special forces uranium seizure mission into Iran — the first US ground combat inside Iran, triggering a major escalation response. Alternatively: Saudi Arabia activates its "full right to take all necessary measures" against Iran directly, bringing the Gulf's military into the coalition against Iran. Alternatively: Mojtaba Khamenei's first act as Supreme Leader is an announcement of nuclear weapons development resumption (he reportedly supports acquisition). Any of these triggers a spiral beyond current modeling. Oil past $150. Global recession. Pakistan nuclear framework activated.</p>
 <h3>CATALYST CALENDAR</h3>
 <div class="table-wrap"><table>
 <thead>
@@ -725,121 +513,126 @@ Saudi production facility penetrated after interceptor depletion. Pakistan activ
 </thead>
 <tbody>
 <tr>
-<td><strong>Mar 8 (Sun PM)</strong></td>
-<td><strong>Oil market reopens</strong></td>
-<td>Goldman: $100+ if no solutions. 500 tankers stuck. Gap $5-10+ probable.</td>
+<td><strong>Mar 9-11 (NOW)</strong></td>
+<td><strong>Interceptor rationing threshold</strong></td>
+<td>Days 10-12. Gulf states begin forced triage. MOST IMMINENT. Patriots departing Korea.</td>
 </tr>
 <tr>
-<td><strong>Mar 10-12</strong></td>
-<td><strong>Interceptor rationing threshold</strong></td>
-<td>Gulf states begin triage. Saudi production vulnerable. MOST IMMINENT.</td>
+<td><strong>Mar 10 (Mon PM)</strong></td>
+<td><strong>G7 leaders call/video</strong></td>
+<td>SPR coordination. Macron confirmed "envisaged." Brent -$15-20 possible on announcement.</td>
+</tr>
+<tr>
+<td><strong>Mar 12-14</strong></td>
+<td><strong>Iran Mojtaba first public statement</strong></td>
+<td>Will signal nuclear posture and war strategy. Has not been heard from publicly since war began.</td>
 </tr>
 <tr>
 <td>~Mar 16</td>
-<td>Insurance buyback cliff</td>
-<td>War-risk coverage unavailable at any price. Structural inflection.</td>
+<td><strong>Insurance buyback cliff</strong></td>
+<td>War-risk coverage unavailable at any price. Structural Hormuz inflection.</td>
 </tr>
 <tr>
 <td>Mar 16</td>
 <td>EA LBO $15.5B debt launch</td>
-<td>Live credit stress test.</td>
+<td>Live credit stress test in frozen market.</td>
 </tr>
 <tr>
 <td>Mar 15-30</td>
 <td>Q1 private credit marks</td>
-<td>Institutional forced selling.</td>
+<td>Institutional forced selling. Defaults 5.8% (Fitch record).</td>
 </tr>
 <tr>
 <td>Mar 17-18</td>
-<td>FOMC meeting</td>
-<td>Stagflation trap. Bowman-Hammack split.</td>
+<td><strong>FOMC meeting</strong></td>
+<td>Stagflation trap. Fed paralyzed — can't cut (inflation), can't hike (jobs).</td>
 </tr>
 <tr>
 <td>Mar 18-19</td>
-<td>ECB meeting</td>
-<td>Hike now priced. DECISIVE for European periphery.</td>
+<td><strong>ECB meeting</strong></td>
+<td>TWO HIKES now priced (from expected cuts). Most dramatic monetary reversal in years.</td>
 </tr>
 <tr>
 <td>Mar 20</td>
 <td>Nowruz</td>
-<td>Cultural minimum floor.</td>
+<td>Cultural minimum floor for internal Iranian politics.</td>
 </tr>
 <tr>
-<td>~Mar 28-Apr 1</td>
+<td>~Mar 28–Apr 1</td>
 <td>JPM retail capitulation window</td>
-<td>1-month lag from conflict onset. VIX 35-45 target.</td>
+<td>1-month lag from conflict onset. VIX 35-45 target per MCC.</td>
 </tr>
 <tr>
 <td>~Apr 10-12</td>
-<td>40-day mourning floor</td>
-<td>Absolute minimum for regime transition.</td>
+<td><strong>40-day mourning floor</strong></td>
+<td>Absolute minimum for any regime transition or negotiated exit.</td>
 </tr>
 </tbody>
 </table></div>
 <hr />
-<h2>8. PREDICTION TRACKER — SCORING DAY 7 SCENARIOS</h2>
-<p><strong>Day 7 Scenario A (Campaign Deepens / Energy Crisis Locks In — 60%):</strong> ✅ <strong>CONFIRMED.</strong> Phase 3 announced. Mehrabad Airport struck. 3,000+ targets. Brent $92.69. WTI posted largest weekly gain in futures history. Kuwait cutting production. Force majeure cascade active. NFP -92K confirmed stagflation.</p>
-<p><strong>Day 7 Scenario B (Backchannel Emerges — 20%):</strong> ⚠️ <strong>PARTIALLY.</strong> Pezeshkian apologized to Gulf neighbors — the most conciliatory signal from any Iranian leader since the war began. However, IRGC struck UAE hours later, demonstrating command fragmentation prevents any diplomatic signal from translating to action. Probability downgraded from 20% to 15%.</p>
-<p><strong>Day 7 Scenario C (Major Escalation — 20%):</strong> ⚠️ <strong>ADVANCING.</strong> Phase 3 targeting expansion declared. Pakistan mutual defense pact activated. Shaybah under sustained multi-wave attack. NFP confirmed stagflation creates economic crisis overlay. Probability upgraded from 20% to 25% as interceptor rationing approaches.</p>
-<p><strong>Calibration note:</strong> Day 7 Scenario A was again the correct primary call. The energy market severity exceeded expectations (WTI +35.6% weekly = historic). Pezeshkian's signal was unexpected but correctly captured under Scenario B's framework — however, the command fragmentation factor we identified in Day 7 was validated when IRGC contradicted him within hours.</p>
+<h2>8. PREDICTION TRACKER — SCORING DAY 8 SCENARIOS</h2>
+<p><strong>Day 8 Scenario A (Interceptor Crisis Begins / Energy Spike — 60%):</strong> ✅ <strong>CONFIRMED AND EXCEEDED.</strong> Brent spiked to $119.50 intraday — the $100 threshold was crossed on Day 10, ahead of the Day 10-12 forecast. Citi 16M bbl/day disruption exceeds prior forecasts. Bapco force majeure, Fujairah oil attack, Shaybah multi-wave attacks all confirmed. Goldman's $100+ "next week" forecast was correct. Interceptor rationing threshold arrives today. US gasoline $3.45/gallon. WTI largest weekly gain in futures history validated.</p>
+<p><strong>Day 8 Scenario B (Diplomatic Opening — 15%):</strong> ❌ <strong>DID NOT MATERIALIZE.</strong> China's Zhai Jun was active but produced no "neighbor ceasefire" signal. Pezeshkian's conciliatory moves were again contradicted by simultaneous IRGC strikes. Mojtaba Khamenei's appointment — immediately followed by new IRGC missile launches — forecloses the diplomatic scenario with increased certainty. Probability downgraded to near-zero for near-term diplomatic pathway.</p>
+<p><strong>Day 8 Scenario C (Catastrophic Escalation — 25%):</strong> ⚠️ <strong>ADVANCING / PARTIALLY ACTIVE.</strong> Pakistan mutual defense pact activated. Interceptor depletion arriving on schedule. Uranium seizure mission under active planning (ground forces threshold). Bapco FM and Fujairah attack confirm energy infrastructure penetration. Saudi FM warning of "all necessary measures" raises Gulf military entry risk. Did not yet reach $120 sustained or Saudi production penetration — but Scenario C's structural preconditions are all now in place.</p>
+<p><strong>Calibration note:</strong> Day 8 Scenario A was correct again, with the oil price forecast understating the speed of escalation (the $100 threshold arrived on Day 10 rather than the implied "next week" — effectively right on schedule). The most significant intelligence failure in prior modeling was underweighting the speed of the energy infrastructure cascade — Israeli oil depot strikes came earlier than anticipated and were more extensive in scope than the administration itself expected. The 31-unit IRGC decentralization revelation is a structural upgrade to ceasefire analysis: the probability floor is no longer about leadership willingness but mechanical impossibility.</p>
 <hr />
 <div class="sources-manifest"><h2>9. SOURCE MANIFEST</h2>
 <h3>Sources Consulted for This Report:</h3>
 <p><strong>Major News Outlets:</strong>
-- CNN — Day 8 Summary (Mehrabad Airport ablaze, 3,000+ targets, Gulf strikes, Trump "unconditional surrender," NK weapons sale, Hezbollah Bekaa clashes): https://www.cnn.com/2026/03/06/middleeast/us-israel-iran-war-what-we-know-intl-hnk
-- Al Jazeera — Day 8 What Is Happening (1,332 killed, 330,000 displaced, Hezbollah Bekaa helicopters, B-1 UK deployment, Kuwait oil cuts, Qatar partial air resumption): https://www.aljazeera.com/news/2026/3/7/iran-war-what-is-happening-on-day-eight-of-us-israel-attacks
-- Al Jazeera — Tehran Pounded in Week Two (Mehrabad fire, 5 ballistic launches at Israel overnight, Isfahan strikes, most intense bombardment yet): https://www.aljazeera.com/news/2026/3/7/tehran-pounded-in-week-two-of-us-israel-war-iran-targets-israel
-- Al Jazeera — "Fifth Column" Warning (regime cracking down on citizens sharing footage, satellite jamming, internet blackout, police warnings): https://www.aljazeera.com/news/2026/3/7/iranian-authorities-warn-against-fifth-column-as-no-signs-of-war-abating
-- Al Jazeera — Live Blog Mar 7 (Trump "very hard" strikes, Pezeshkian "never capitulate," unconditional surrender demand): https://www.aljazeera.com/news/liveblog/2026/3/7/iran-war-live-trump-says-no-deal-with-iran-until-unconditional-surrender
-- NPR — Trump Warns "Very Hard" / War Week One (1,300+ killed, Azerbaijan struck, Karachi consulate closed, China envoy, oil disruption): https://www.npr.org/2026/03/07/nx-s1-5739242/iran-war-oil-trump-israel-spain-economy-one-week
-- CNBC — Iran Strikes UAE After Pezeshkian Apology (Al Dhafra attack, 121 UAE drones, command fragmentation confirmed): https://www.cnbc.com/2026/03/07/not-slowing-down-one-week-on-us-israeli-strikes-on-iran-continue.html
-- Gulf News — Day 8 Live Updates (Mehrabad 16 IRGC aircraft, Shaybah 4-wave drone attack, Prince Sultan missiles, Qatar partial flights, UAE 121 drones): https://gulfnews.com/uae/usisrael-war-on-iran-day-8
-- ANI / Tribune India — Mehrabad Airport Ablaze (geolocated CNN footage, Saudi 16-drone intercept detail, Shaybah as "super-giant" field): https://aninews.in/news/world/middle-east/tehrans-mehrabad-airport-ablaze
-- Yahoo News UK — Mehrabad Strikes ($151.8M bomb sale to Israel, Bessent "biggest bombing campaign," Germany's Merz warning): https://uk.news.yahoo.com/iran-war-israel-launches-broad-234600236.html
-- Bloomberg — Iran War Live Updates (Mehrabad, oil output slowing, Hormuz tracker): https://www.bloomberg.com/news/live-blog/2026-03-07/iran-latest</p>
-<p><strong>Iranian Sources:</strong>
-- Tasnim News Agency — IRGC Al Dhafra strike claim, Pezeshkian statements, drone operations, Mehrabad damage reports: https://tasnimnews.ir/en
-- Mehr News Agency — Mehrabad Airport accusation against Israel, strike damage: referenced via CNN/Al Jazeera
-- Fars News Agency — Iranian retaliatory strikes on Tel Aviv: referenced via Al Jazeera</p>
-<p><strong>Israeli Sources:</strong>
-- IDF Official — 80+ jets, 16 Quds Force aircraft destroyed, Mehrabad strike rationale (weapons/cash transfers to proxies), Iranian fighter jets targeted: referenced via Gulf News/CNN
-- Times of Israel — Multi-week conflict preparation, weapons sale approval: https://www.timesofisrael.com/</p>
+- CNN — Day 10 What We Know (Mojtaba appointment, IRGC missile launches, Bapco FM, Fujairah fire, school strike Senate Democrats, Pennington death, Trump asylum offer to soccer team, energy targeting "new phase"): https://www.cnn.com/2026/03/08/middleeast/us-israel-iran-middle-east-war-what-we-know-intl-hnk
+- CNN Live Blog Mar 9 (Pennington identified, administration concern over oil depot strikes, Trump Times of Israel interview, soccer team asylum): https://www.cnn.com/world/live-news/iran-war-us-israel-trump-03-09-26
+- CNN Business — Oil Prices $100 (G7 SPR discussion, energy sec Wright interview, Kpler $150 forecast, IRGC $200 warning, China pausing fuel exports): https://edition.cnn.com/2026/03/08/business/oil-prices-war-iran-trump
+- Al Jazeera — Day 10 What Is Happening (Mojtaba appointment, Qatar intercepts, Saudi Shaybah drone, Bahrain Sitra 32 injured, UAE air defense, Bapco FM): https://www.aljazeera.com/news/2026/3/9/iran-war-what-is-happening-on-day-10-of-us-israel-attacks
+- Al Jazeera — Live Blog Mar 9 (Iran: US wants to "partition country, take oil," military leaders pledge allegiance): https://www.aljazeera.com/news/liveblog/2026/3/9/iran-war-live-mojtaba-khamenei-named-supreme-leader-israel-bombs-tehran
+- Al Jazeera — Who Is Mojtaba Khamenei (biography, IRGC links, Iran-Iraq War, economic empire, sanctions, religious rank controversy, dynastic concerns): https://www.aljazeera.com/features/2026/3/8/who-is-mojtaba-khamenei-a-contender-for-irans-leadership-amid-war
+- NPR — Day 10 Summary (Mojtaba appointment, Bapco FM, Sitra injuries, Shaybah intercept, Al-Kharj 2 killed, Fujairah fire, Senate Democrats school strike statement): https://www.npr.org/2026/03/09/nx-s1-5742327/us-israel-iran-war-new-supreme-leader
+- NPR — Day 9 Summary (IRGC missile types named, IRIS Dena 104 killed, desalination plant strike, Israel "three more weeks," IRGC 5 commanders in Lebanon killed, white phosphorus): https://www.npr.org/2026/03/08/nx-s1-5741654/israel-iran-oil-ayatollah-successor
+- NBC News Live Blog (Araghchi "continue fighting," Russia intelligence provision, Pennington death, school strike senators, stock market -700 Dow): https://www.nbcnews.com/world/iran/live-blog/live-updates-iran-war-oil-prices-khamenei-supreme-leader-israel-trump-rcna262378
+- CBS News Live (White House "strong game plan" statement, Pennington death Pentagon statement, Spain trade threat, Churchill comparison): https://www.cbsnews.com/live-updates/us-iran-war-israel-stock-prices-down-oil-prices-up-despite-trump-reassurance/
+- PBS NewsHour — Week Two Summary (Mojtaba appointment, 1,200+ killed Iran, 400 Lebanon, protests, women's soccer team): https://www.pbs.org/newshour/world/the-war-in-iran-has-entered-a-second-week-heres-where-things-stand
+- Bloomberg — Day 10 (Mojtaba "decisive vote" Fars, IRGC "full obedience," Trump "$100 small price," Trump "we'll see what happens"): https://www.bloomberg.com/news/articles/2026-03-08/iran-elevates-khamenei-s-son-as-escalating-strikes-shake-region
+- Washington Post — Day 10 (G7 leaders convening Monday, Stoxx 600 -2%, DAX -2.5%, FTSE -1.5%): https://www.washingtonpost.com/world/2026/03/09/iran-war-us-trump-israel-strikes/
+- Washington Times — Trump "$100 small price" (WTI $100, Dow -400, Russia India waiver, Gallego/Liccardo letter to Bessent): https://www.washingtontimes.com/news/2026/mar/9/trump-high-oil-prices-surging-100-barrel-small-price-pay-wages-iran/
+- TIME — Oil $100 threshold analysis (Red Sea diversion, Kuwait/UAE/Iraq production cuts, storage overflow, 2-week restore time estimate, price cycling states): https://time.com/7383152/iran-israel-us-crude-oil-prices-outlook-markets-trump-hormuz/
+- Fortune — Uranium seizure mission, Dow -800, special forces discussion, oily/acid rain Tehran, Israel oil depots surprise to administration: https://fortune.com/2026/03/08/oil-prices-100-barrel-dow-futures-stock-market-today-iran-war-special-forces-mission/
+- Newsweek — Brent $107+ analysis, Verisk Maplecroft quote, Energy Secretary Wright "weeks not months," Kpler Falakshahi quote: https://www.newsweek.com/donald-trump-reacts-oil-prices-skyrocket-iran-war-11643007
+- Euronews — Mojtaba nuclear posture risk (Fordow/Isfahan/Natanz in tatters from June 2025, 441 kg HEU hidden, weapons-grade one step away): https://www.euronews.com/2026/03/09/iran-names-mojtaba-khamenei-as-supreme-leader-to-succeed-late-father-ayatollah-ali-khamene</p>
 <p><strong>Regional Sources:</strong>
-- Saudi Press Agency (SPA) — Shaybah drone intercepts (4 waves, 16 drones), Prince Sultan Air Base missiles, Riyadh drone, Al-Kharj targeting: referenced via Gulf News/ANI
-- UAE Ministry of Defence — 121 drones detected Saturday, 119 intercepted, 2 landed: referenced via CNBC
-- Qatar — Partial air navigation resumed, limited repatriation flights March 7: referenced via Al Jazeera/World News</p>
-<p><strong>Government / Military Primary Sources:</strong>
-- CENTCOM — 3,000+ targets struck in one week: referenced via CNN
-- US State Department Bureau of Political-Military Affairs — $151.8M weapons sale to Israel (12,000 bomb bodies): referenced via Yahoo News
-- Treasury Secretary Bessent — "Biggest bombing campaign tonight," Russia sanctions easing, India waiver: referenced via Fox Business/CNBC</p>
+- Gulf News — Day 10 Live (Lufthansa/Air France suspension to March 15, India 50 inbound flights planning, UAE 1,400+ missiles/drones total, Fujairah fire contained, Kuwait 2 officers killed, Saudi FM statement): https://gulfnews.com/world/mena/usisrael-war-on-iran-day-10-mojtaba-khamenei-named-supreme-leader-gulf-states-face-new-attacks-1.500467987
+- Argus Media — Bapco FM technical (405,000 b/d Sitra capacity, Maameer attack, IRGC spokesman Zolfaghari energy warning, Karaj/Shahran/Aghdasieh/Shahr-e Rey depot attacks): https://www.argusmedia.com/en/news-and-insights/latest-market-news/2798255-bahrain-s-bapco-issues-force-majeure-after-refinery-hit
+- Daily Sabah — Bapco FM confirmation (Bahrain Petroleum force majeure, Al Ma'ameer facility, AFP confirmation): https://www.dailysabah.com/business/energy/bahrains-state-oil-firm-declares-force-majeure-after-iran-strikes
+- CBC — Day 10 summary (Bapco FM, Bangladesh university closures, Canada 110K registered/5,200 requesting assistance, $119 oil, 70% Saudi water from desalination): https://www.cbc.ca/news/world/livestory/iran-israel-us-war-day-10-9.7119190
+- Britannica — 2026 Iran Conflict (Turkish NATO intercept, Lebanese parliament 2-year extension, circuit breakers): https://www.britannica.com/event/2026-Iran-Conflict</p>
 <p><strong>OSINT / Think Tanks:</strong>
-- CTP-ISW Evening Special Report Mar 5 (IRGC special forces targeting, Bandar Abbas satellite imagery, Kilo-class submarines, mosaic defense doctrine, Kurdish ops): https://www.criticalthreats.org/analysis/iran-update-evening-special-report-march-5-2026
-- CTP-ISW Morning Special Report Mar 4 (ballistic missile 86% decrease, FATA cyber police strikes, Hezbollah coordination): https://www.criticalthreats.org/analysis/iran-update-morning-special-report-march-4-2026
-- Wikipedia — 2026 Iran War (Pezeshkian neighbor pledge, Dubai airport attacked despite pledge, Turkey F-16 consideration, Red Crescent 6,668 civilian units, Mojtaba survival): https://en.wikipedia.org/wiki/2026_Iran_war
-- Wikipedia — Timeline of the 2026 Iran Conflict (March 6-7 events, Mehrabad, Shaybah waves, Bekaa Valley clashes): https://en.wikipedia.org/wiki/Timeline_of_the_2026_Iran_conflict
-- ACLED — Middle East Special Issue March 2026 (strikes in 26/31 provinces, 90+ attacks on Israel, Houthi analysis, interceptor constraints): https://acleddata.com/update/middle-east-special-issue-march-2026
-- MCC Intelligence Report #16 (CRITICAL — interceptor 10-12 day rationing threshold, JPMorgan 1-month retail capitulation lag, Phase 3 targeting, command fragmentation/mosaic doctrine, Pakistan-Saudi mutual defense pact, Goldman $147+ scenario, WTI +35.6% largest weekly gain in history, NFP -92K, Platts Dubai $23 premium, port congestion cascade Nhava Sheva 64%, ECB hike pricing, policy exhaustion confirmed, Vahidi IRGC consolidation, $5/gal gasoline scenario): Private intelligence report</p>
+- CTP-ISW Evening Mar 7 (Iranian oil production/storage facilities targeted first time March 7, Pezeshkian hardliner criticism, Iran commercial vessel targeting, Iraqi militia front groups, UAE 121 drones/16 missiles): https://www.criticalthreats.org/analysis/iran-update-evening-special-edition-march-7-2026
+- ACLED Middle East Special Issue (17 Iranian warships destroyed, 90+ Iran-Israel strikes in 5 days, commercial vessel targeting, PMF analysis, investment confidence): https://acleddata.com/update/middle-east-special-issue-march-2026
+- Wikipedia — 2026 Iran War (Mojtaba succession, IRGC pledge, full casualties, ground incursion Lebanon, warship sinking, school strike, HRW white phosphorus, 32,000 Americans evacuated): https://en.wikipedia.org/wiki/2026_Iran_war
+- MCC Intelligence Report #19 (CRITICAL — 31-unit IRGC decentralization/Basij cells of five, Rapidan "largest disruption in history," Citi 16M bbl/day, Brent $120 intraday, G7 SPR 1.2B barrels/75 days, Patriots departing Korea, Mojtaba as figurehead, Venezuela model failure, credit freeze iTraxx &gt;300bps, capitulation 0.3 percentile, VIX exit zone, DXY sole haven, ECB two hikes, shadow fleet thesis, ceasefire 5% floor): Private intelligence report</p>
 <p><strong>Financial / Energy:</strong>
-- Goldman Sachs — $100+ next week, $147+ if Hormuz through March (via MCC/Bloomberg/CNBC)
-- Investing.com — Brent $92.78, range $83.17-$94.51: https://www.investing.com/commodities/brent-oil
-- CNBC — WTI $90.90 (+35.6% weekly, largest gain since 1983), gasoline $3.38: referenced via prior sessions
-- US BLS — NFP -92K vs. +55K consensus, unemployment 4.4%: referenced via MCC/Bloomberg
-- API CEO Sommers — Only military Hormuz reopening will stabilize prices: referenced via MCC/FT</p>
-<p><strong>UN / International Organizations:</strong>
-- UN Secretary-General — Violence could "spiral out of control": referenced via Gulf News
-- UNICEF — 181+ children killed in Iran: referenced via prior SITREP
-- Iranian Red Crescent — 1,332+ killed, 6,668 civilian units targeted: referenced via Wikipedia/Al Jazeera</p>
-<p><strong>Sources in Prompt Not Fully Reached:</strong>
-- FlightAware / Flightradar24: Aviation data covered via airline/airport statements
-- TradingView: Financial data covered via Bloomberg, Goldman, Investing.com
-- Bellingcat: No specific March 7 publication identified
-- IISS / RAND: No March 7 publications; referenced via prior analysis
-- Ynet: Covered via Times of Israel and IDF statements
-- MarineTraffic: Hormuz data referenced via MCC/Bloomberg tracker</p>
+- Kpler — Homayoun Falakshahi: $150/bbl by end of March if Hormuz closed: referenced via CNN
+- Goldman Sachs — $100+ forecast validated (via Bloomberg)
+- AAA — US gasoline $3.45/gallon Sunday, +16% weekly: referenced via CNN Business
+- OilPrice.com — Brent ~$107 current, +40% from $73 on Feb 28: referenced via Newsweek
+- Saxo Markets / Neil Wilson — "Complacency replaced by panic": referenced via CNN Business
+- Verisk Maplecroft / Torbjorn Soltvedt — energy infrastructure + Hormuz double risk: referenced via Newsweek
+- Al-Kaabi (Qatar Energy Minister) — all Gulf FM "within days": referenced via TIME/NPR</p>
+<p><strong>Government / Military:</strong>
+- CENTCOM — Sgt. Benjamin Pennington death confirmed: referenced via CNN/NBC
+- Pentagon / Sean Parnell — Iran placing launch platforms in civilian neighborhoods: referenced via Gulf News
+- US State Dept — non-emergency diplomatic departure from Saudi Arabia, 32,000 Americans evacuated: referenced via CNN/AL Jazeera
+- US Energy Secretary Chris Wright — "weeks, not months," no plan to strike Iranian energy: referenced via CNN
+- IDF — wide-scale strikes, IRGC aerospace HQ, 5 IRGC commanders in Lebanon killed: referenced via NPR/CNN
+- Israel senior military officer (anon) — "three more weeks" needed: referenced via NPR
+- Human Rights Watch — white phosphorus use in southern Lebanon confirmed: referenced via NBC/CNN</p>
+<p><strong>Sources Not Fully Reached:</strong>
+- CTP-ISW March 8-9 daily reports (March 6 was latest available in search results; March 8-9 reports not yet indexed at time of writing)
+- IISS, RAND: No March 9 publications identified
+- Bellingcat: School strike geolocation cited via NPR/Senate Democrats statement (confirmed prior reporting)
+- MarineTraffic: Hormuz data referenced via Kpler/Bloomberg</p>
 <hr />
-<p><em>END SITREP-2026-03-07</em>
-<em>Sources consulted: 30+ individual URLs across 20+ outlets. Report length: ~3,500 words (excl. source manifest).</em>
-<em>Next report: SITREP-2026-03-08</em></p></div>
+<p><em>END SITREP-2026-03-09</em>
+<em>Sources consulted: 35+ individual URLs across 25+ outlets. Report length: ~4,200 words (excl. source manifest).</em>
+<em>Next report: SITREP-2026-03-10</em></p></div>
 </article>
 
 
