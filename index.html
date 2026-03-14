@@ -120,10 +120,10 @@
     .sources-manifest p { font-size: 0.78rem; color: var(--text-muted); }
     .report-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--hr); font-size: 0.82rem; color: var(--text-muted); font-style: italic; line-height: 1.8; }
     @media (max-width: 640px) {
-      .topbar { padding: 10px 16px; flex-wrap: wrap; gap: 8px; }
-      .topbar-nav { order: 1; width: 100%; justify-content: space-between; }
-      .topbar-label { order: 0; }
-      .theme-toggle { order: 2; }
+      .topbar { padding: 10px 16px; gap: 12px; }
+      .topbar-label { font-size: 0.65rem; }
+      .topbar-nav a { font-size: 0.65rem; }
+      .theme-toggle-label { display: none; }
       .article { padding: 24px 16px 60px; }
       h1 { font-size: 1.35rem; }
       h2 { font-size: 1.15rem; margin-top: 32px; }
@@ -137,7 +137,7 @@
 
 <header class="topbar">
   <nav class="topbar-nav">
-    <a href="2026-03-13.html">← 03-13</a>
+    <a href="2026-03-10.html">← 03-10</a>
   </nav>
   <div class="topbar-label"><span>●</span> SITREP — Day 15 of Conflict</div>
   <div class="theme-toggle" onclick="toggleTheme()" tabindex="0" role="button" aria-label="Toggle theme">
