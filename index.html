@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SITREP-2026-03-14 | Day 15 of Conflict — US-Iran Conflict Intelligence Brief</title>
+  <meta name="description" content="Daily intelligence briefing on the US-Iran conflict. Day 15 of Conflict.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'IBM Plex Mono', 'Menlo', monospace;
+      --max-width: 860px;
+      --radius: 4px;
+    }
+    [data-theme="light"] {
+      --bg: #ffffff; --bg-secondary: #f6f7f9; --bg-table-header: #eef1f5;
+      --bg-table-alt: #f9fafb; --bg-code: #f0f2f5; --border: #dce0e6;
+      --border-light: #e8ecf0; --text: #1a1d23; --text-secondary: #4a5060;
+      --text-muted: #6b7280; --accent: #2563eb; --red: #dc2626;
+      --orange: #ea580c; --green: #16a34a; --yellow: #ca8a04;
+      --hr: #dce0e6; --toggle-bg: #e5e7eb; --toggle-knob: #ffffff;
+      --shadow: 0 1px 3px rgba(0,0,0,0.06); --link: #2563eb;
+    }
+    [data-theme="dark"] {
+      --bg: #0f1117; --bg-secondary: #181b23; --bg-table-header: #1c2030;
+      --bg-table-alt: #141720; --bg-code: #1a1e2a; --border: #2a2f3d;
+      --border-light: #232836; --text: #e2e5eb; --text-secondary: #9ca3b4;
+      --text-muted: #6b7485; --accent: #60a5fa; --red: #f87171;
+      --orange: #fb923c; --green: #4ade80; --yellow: #fbbf24;
+      --hr: #2a2f3d; --toggle-bg: #374151; --toggle-knob: #0f1117;
+      --shadow: 0 1px 3px rgba(0,0,0,0.3); --link: #60a5fa;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: var(--font-body); background: var(--bg); color: var(--text);
+      line-height: 1.7; transition: background 0.3s ease, color 0.3s ease;
+      -webkit-font-smoothing: antialiased; font-weight: 400;
+    }
+    .topbar {
+      position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border);
+      padding: 12px 24px; display: flex; justify-content: space-between; align-items: center;
+      transition: background 0.3s ease; backdrop-filter: blur(12px);
+    }
+    [data-theme="light"] .topbar { background: rgba(255,255,255,0.92); }
+    [data-theme="dark"] .topbar { background: rgba(15,17,23,0.92); }
+    .topbar-nav { display: flex; align-items: center; gap: 16px; }
+    .topbar-nav a {
+      font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-muted);
+      text-decoration: none; word-break: normal;
+    }
+    .topbar-nav a:hover { color: var(--accent); }
+    .topbar-label {
+      font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted);
+    }
+    .topbar-label span { color: var(--red); margin-right: 6px; }
+    .theme-toggle { display: flex; align-items: center; gap: 8px; cursor: pointer; user-select: none; }
+    .theme-toggle-label {
+      font-family: var(--font-mono); font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-muted);
+    }
+    .toggle-track {
+      position: relative; width: 44px; height: 24px; background: var(--toggle-bg);
+      border-radius: 12px; transition: background 0.3s ease; flex-shrink: 0;
+    }
+    .toggle-knob {
+      position: absolute; top: 3px; left: 3px; width: 18px; height: 18px;
+      background: var(--toggle-knob); border-radius: 50%;
+      transition: transform 0.3s ease, background 0.3s ease;
+      display: flex; align-items: center; justify-content: center;
+    }
+    [data-theme="dark"] .toggle-knob { transform: translateX(20px); background: var(--text); }
+    .toggle-icon { font-size: 10px; line-height: 1; }
+    [data-theme="light"] .toggle-icon-moon { display: none; }
+    [data-theme="dark"] .toggle-icon-sun { display: none; }
+    .article { max-width: var(--max-width); margin: 0 auto; padding: 40px 24px 80px; }
+    h1 { font-size: 1.65rem; font-weight: 700; line-height: 1.25; margin-bottom: 4px; letter-spacing: -0.01em; }
+    h2 { font-size: 1.3rem; font-weight: 700; line-height: 1.3; margin-top: 40px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
+    h3 { font-size: 1.05rem; font-weight: 700; line-height: 1.4; margin-top: 28px; margin-bottom: 12px; }
+    p { margin-bottom: 16px; font-weight: 400; }
+    .meta { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.8; }
+    .meta strong { color: var(--text); font-weight: 600; }
+    strong { font-weight: 600; }
+    a { color: var(--link); text-decoration: none; word-break: break-all; }
+    a:hover { text-decoration: underline; }
+    hr { border: none; height: 1px; background: var(--hr); margin: 36px 0; }
+    ul, ol { padding-left: 24px; margin-bottom: 16px; }
+    li { margin-bottom: 6px; line-height: 1.65; }
+    .table-wrap {
+      overflow-x: auto; margin: 20px 0; border: 1px solid var(--border);
+      border-radius: var(--radius); box-shadow: var(--shadow);
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 0.84rem; line-height: 1.55; }
+    thead th {
+      background: var(--bg-table-header); font-weight: 600; text-align: left;
+      padding: 10px 14px; border-bottom: 2px solid var(--border); white-space: nowrap;
+      font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-secondary);
+    }
+    tbody td { padding: 10px 14px; border-bottom: 1px solid var(--border-light); vertical-align: top; font-weight: 400; }
+    tbody tr:nth-child(even) { background: var(--bg-table-alt); }
+    tbody tr:last-child td { border-bottom: none; }
+    .scenario { background: var(--bg-secondary); border-left: 3px solid var(--border); padding: 16px 20px; margin: 16px 0; border-radius: 0 var(--radius) var(--radius) 0; }
+    .scenario-a { border-left-color: var(--red); }
+    .scenario-b { border-left-color: var(--yellow); }
+    .scenario-c { border-left-color: var(--orange); }
+    .scenario p { margin-bottom: 0; font-weight: 400; }
+    .scenario p strong { font-weight: 600; display: block; margin-bottom: 6px; font-size: 0.95rem; }
+    .sources-manifest { margin-top: 40px; }
+    .sources-manifest h2 { font-size: 1.1rem; }
+    .sources-manifest h3 { font-size: 0.85rem; margin-top: 20px; margin-bottom: 6px; color: var(--text-secondary); }
+    .sources-manifest ul { list-style: none; padding-left: 0; }
+    .sources-manifest li { font-size: 0.78rem; padding: 3px 0; line-height: 1.55; color: var(--text-muted); }
+    .sources-manifest li strong { color: var(--text-secondary); }
+    .sources-manifest p { font-size: 0.78rem; color: var(--text-muted); }
+    .report-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--hr); font-size: 0.82rem; color: var(--text-muted); font-style: italic; line-height: 1.8; }
+    @media (max-width: 640px) {
+      .topbar { padding: 10px 16px; flex-wrap: wrap; gap: 8px; }
+      .topbar-nav { order: 1; width: 100%; justify-content: space-between; }
+      .topbar-label { order: 0; }
+      .theme-toggle { order: 2; }
+      .article { padding: 24px 16px 60px; }
+      h1 { font-size: 1.35rem; }
+      h2 { font-size: 1.15rem; margin-top: 32px; }
+      .meta { font-size: 0.8rem; }
+      table { font-size: 0.78rem; }
+      thead th, tbody td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="topbar">
+  <nav class="topbar-nav">
+    <a href="2026-03-13.html">← 03-13</a>
+  </nav>
+  <div class="topbar-label"><span>●</span> SITREP — Day 15 of Conflict</div>
+  <div class="theme-toggle" onclick="toggleTheme()" tabindex="0" role="button" aria-label="Toggle theme">
+    <span class="theme-toggle-label">Theme</span>
+    <div class="toggle-track">
+      <div class="toggle-knob">
+        <span class="toggle-icon toggle-icon-sun">☀</span>
+        <span class="toggle-icon toggle-icon-moon">☽</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article">
+<h1>SITREP-2026-03-14 | DAY 15 OF CONFLICT</h1>
+<div class="meta">
+<strong>CLASSIFICATION:</strong> OPEN SOURCE<br>
+<strong>SUBJECT:</strong> US-IRAN CONFLICT — DAILY INTELLIGENCE BRIEF<br>
+<strong>PREPARED:</strong> March 14, 2026<br>
+<strong>OPERATION NAMES:</strong> Epic Fury (US) / Roaring Lion (Israel) / True Promise IV (Iran)
+</div>
+<hr />
+<h2>1. BLUF — Bottom Line Up Front</h2>
+<ul>
+<li><strong>US struck Kharg Island — Iran's "crown jewel"</strong> — Trump announced US forces "totally obliterated" 90+ military targets on the island that handles 90% of Iran's crude exports. Oil infrastructure deliberately spared, but Trump warned it could be targeted if Iran continues blocking the Strait of Hormuz. Iran declared UAE ports and all US-linked facilities "legitimate targets" in response. IRGC warned any attack on Iranian energy infrastructure will trigger retaliation against regional oil facilities.</li>
+<li><strong>Horizontal escalation — bypass infrastructure under attack</strong> — Fujairah (UAE's primary Hormuz bypass) struck; fire after drone interception. DIFC (Dubai financial center) damaged for third consecutive day. Saudi Diplomatic Quarter targeted. Iran's blanket targeting doctrine now covers any facility with "American ownership or co-operation." The fallback infrastructure itself is now under threat.</li>
+<li><strong>Oil closes above $103 for second day</strong> — Brent settled at $103.14 despite IEA's record 400M barrel release. Market sees through the policy tool: 400M barrels vs. ~20M bbl/day disruption = structural mismatch. SPR release structured as a SWAP (return + premium), not outright sale — weaker than assumed. Goldman: oil 20% higher for 2026. Fertilizer crisis quantified as "worse than 2022" (CRU): 50% of urea exports disrupted during planting season.</li>
+<li><strong>Lebanon: 826+ killed, 12 medical workers killed in single strike</strong> — Israeli strike on healthcare center in Borj Qalaouiyah killed 12 doctors, paramedics and nurses. Total 26 paramedics killed since March 2. Israel threatened "Gaza-scale" devastation, destroyed Litani River bridge (first acknowledged civilian infrastructure strike). 800,000+ displaced (~1 in 7 of population). Macron offered Paris ceasefire talks.</li>
+<li><strong>Administration fracture emerges</strong> — David Sacks (Trump AI/crypto adviser, close to Vance/Musk) publicly called to "declare victory and get out," warning Gulf could become "uninhabitable." But Trump struck Kharg + pledged Navy escorts "soon" on same day. Chatham House analysis: Iran heading toward 1990s Iraq scenario — 12-year containment baseline.</li>
+</ul>
+
+<h3>BATTLEFIELD STATUS GRID</h3>
+<p><strong>Legend:</strong> 🔴 Active combat / escalating · 🟠 Under attack / high risk · 🟡 Tense / defensive posture · 🟢 Stable / minimal direct threat</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Country</th>
+<th>Status</th>
+<th>Key Development (24h)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Iran</strong></td>
+<td>🔴 Active combat</td>
+<td>Kharg Island struck (90+ military targets). 1,444+ dead, 18,551 injured. IRGC vows retaliation on regional oil infrastructure if energy sites attacked. Mojtaba "wounded and disfigured" per Hegseth. $10M US bounty on leadership.</td>
+</tr>
+<tr>
+<td><strong>Israel</strong></td>
+<td>🔴 Active combat</td>
+<td>7,600 strikes in Iran, 1,100 in Lebanon since Feb 28. Tel Aviv suburbs hit by debris. Missiles from Iran Saturday. Threatening Lebanon with "Gaza-scale" devastation.</td>
+</tr>
+<tr>
+<td><strong>USA</strong></td>
+<td>🔴 Active combat</td>
+<td>Kharg Island strike. 13 soldiers killed total. 2,500 Marines + USS Tripoli deploying. 10,000 interceptor drones being sent. Trump: war ends "when I feel it in my bones."</td>
+</tr>
+<tr>
+<td><strong>Lebanon</strong></td>
+<td>🔴 Active combat</td>
+<td>826+ killed (103 children), 800K+ displaced. 12 medical workers killed in single strike on healthcare center. 26 paramedics killed total. Litani bridge destroyed. UN base hit. Macron offers Paris talks.</td>
+</tr>
+<tr>
+<td><strong>Saudi Arabia</strong></td>
+<td>🟠 Under attack</td>
+<td>Diplomatic Quarter targeted by drones. 19 drones + 1 ballistic missile intercepted Saturday. Shaybah still under attack.</td>
+</tr>
+<tr>
+<td><strong>UAE</strong></td>
+<td>🔴 ESCALATED</td>
+<td>Declared "legitimate target" by IRGC after Kharg strike. Fujairah struck (bypass infrastructure). DIFC damaged 3rd day. Dubai debris from interceptions. 6 killed, 141 injured total.</td>
+</tr>
+<tr>
+<td><strong>Kuwait</strong></td>
+<td>🟠 Under attack</td>
+<td>Force majeure active. Ongoing intercepts. 6 killed total including 11-year-old girl.</td>
+</tr>
+<tr>
+<td><strong>Qatar</strong></td>
+<td>🟠 Under attack</td>
+<td>Missile intercepted Saturday. Areas evacuated. Al Udeid base struck. QAFCO shut 5.6M-tonne/yr fertilizer plant. Force majeure.</td>
+</tr>
+<tr>
+<td><strong>Bahrain</strong></td>
+<td>🟠 Under attack</td>
+<td>Sirens sounded Saturday. 114 missiles, 190 drones intercepted since Feb 28. 2 killed.</td>
+</tr>
+<tr>
+<td><strong>Oman</strong></td>
+<td>🟠 NEW — casualties</td>
+<td>2 foreigners killed by drone debris. US ordered non-essential personnel to leave.</td>
+</tr>
+<tr>
+<td><strong>Iraq</strong></td>
+<td>🔴 Proxy battlefield</td>
+<td>US Embassy helipad hit by missile, air defense destroyed. 32 killed (27 PMF, 1 French soldier). KC-135 crash site. Port operations shut.</td>
+</tr>
+<tr>
+<td><strong>Pakistan</strong></td>
+<td>🟠 Destabilizing</td>
+<td>4-day work week continues. Fertilizer production halted. Bangladesh also halted. Mutual defense pact with Saudi Arabia active concern.</td>
+</tr>
+<tr>
+<td><strong>Turkey</strong></td>
+<td>🟡 Tense</td>
+<td>NATO air defenses active. Issued Iraq travel advisory. Third NATO intercept.</td>
+</tr>
+<tr>
+<td><strong>Strait of Hormuz</strong></td>
+<td>🔴 CRITICAL</td>
+<td>Day 15 near-standstill. 17+ vessels attacked since Feb 28. Iran considering yuan-only transit for limited tankers. 6+ weeks minimum recovery.</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>2. MILITARY OPERATIONS</h2>
+<p><strong>US — Kharg Island Strike:</strong> Trump announced US forces "totally obliterated every military target" on Kharg Island overnight Friday. CENTCOM confirmed 90+ targets struck including naval mine storage, missile bunkers, air defenses, naval base, and airport facilities. Oil infrastructure deliberately preserved — Trump warned it could be targeted if Iran continues blocking Hormuz. 2,500 Marines + USS Tripoli amphibious assault ship deploying to region. 10,000 interceptor drones being sent per Army Secretary Driscoll. Total US targets in Iran: 15,000+.</p>
+
+<p><strong>Iran — Horizontal Escalation Doctrine:</strong> IRGC declared UAE ports and all facilities with "American ownership or co-operation" are "legitimate targets" following Kharg strike. Iran's Khatam al-Anbiya command warned any attack on Iranian energy infrastructure will trigger retaliation against regional oil facilities. Foreign Minister Araghchi: strikes launched from UAE territory (Ras al-Khaimah, near Dubai) = "highly dangerous." Fars News: 15+ explosions on Kharg, no oil infrastructure damage. IRGC vowed to deploy "most advanced weaponry including Heidar missiles."</p>
+
+<p><strong>Israel — 7,600 Strikes:</strong> IDF announced 7,600 strikes in Iran and 1,100 in Lebanon since February 28. Continued bombing Tehran Saturday. Netanyahu: Israeli airpower can "create conditions" for regime change but Iranians must take to streets. Defense Minister Katz: Lebanon faces "Gaza-scale devastation" if government doesn't confront Hezbollah.</p>
+
+<p><strong>Mojtaba Status:</strong> Hegseth confirmed Supreme Leader "wounded and likely disfigured." Vance: Khamenei is "hurt" but "we don't know exactly how bad." US offered $10M reward for information on Mojtaba and other officials.</p>
+<hr />
+<h2>3. IRANIAN RETALIATION — STATUS</h2>
+<p>Iran's targeting has shifted to HORIZONTAL ESCALATION — attacking bypass infrastructure and US-linked commercial targets, not just military:</p>
+<ul>
+<li><strong>UAE ports:</strong> Declared "legitimate targets." Fujairah (primary Hormuz bypass) struck — fire after drone interception. DIFC damaged third consecutive day.</li>
+<li><strong>Saudi Arabia:</strong> Diplomatic Quarter targeted. 19 drones + 1 ballistic missile intercepted Saturday.</li>
+<li><strong>Qatar:</strong> Missile intercepted Saturday. Evacuations ordered. Al Udeid struck earlier.</li>
+<li><strong>Bahrain:</strong> Sirens sounded Saturday, shelter orders issued.</li>
+<li><strong>Iraq:</strong> US Embassy helipad hit, air defense destroyed. Smoke rising from compound.</li>
+<li><strong>Israel:</strong> Joint IRGC-Hezbollah Al Quds Day operation. Missiles reaching Tel Aviv suburbs. Debris causing fires.</li>
+<li><strong>Blanket doctrine:</strong> Any facility with "American ownership or co-operation" now potential target — converts every Western-linked Gulf facility into target.</li>
+</ul>
+<hr />
+<h2>4. CRITICAL INFRASTRUCTURE & ENERGY</h2>
+<p><strong>Oil Market — Policy Tools Failing:</strong></p>
+<ul>
+<li><strong>Brent:</strong> Closed $103.14 Friday (second day above $100). Up 17% since IEA release announcement. Highest since July 2022.</li>
+<li><strong>IEA release:</strong> 400M barrels = largest in 50-year history. US: 172M barrels (41% of SPR). But structured as SWAP — companies must return oil plus premium, not outright sale. Bids due March 17.</li>
+<li><strong>Scale mismatch:</strong> 400M barrels vs. ~20M bbl/day disruption = 4 days of global production against indefinite closure. Rystad: 2-month war = $110; 4-month war = $135.</li>
+<li><strong>Bypass infrastructure:</strong> Fujairah struck — the primary alternative to Hormuz transit. Clock 4 (Saudi Bypass) thesis degraded.</li>
+<li><strong>Futures intervention:</strong> Burgum (Energy Secretary) acknowledged WH discussed futures market intervention but called it "hugely costly."</li>
+</ul>
+
+<p><strong>Fertilizer Crisis — "Worse Than 2022" (CRU):</strong></p>
+<ul>
+<li>50% of global urea exports disrupted. QAFCO (Qatar) shut 5.6M-tonne/yr plant.</li>
+<li>India ordered 70% of gas allocation to fertilizer production.</li>
+<li>Pakistan and Bangladesh halted fertilizer production entirely.</li>
+<li>Northern hemisphere planting season NOW. Food price inflation locked in through Christmas 2026.</li>
+</ul>
+
+<p><strong>Helium Crisis:</strong> Qatar (2nd largest producer) offline. Chipmakers have 30-40 day inventory. Semiconductor production prioritization within 3 months (BI).</p>
+
+<p><strong>Aviation & Shipping:</strong></p>
+<ul>
+<li>17+ vessels attacked in/around Hormuz since Feb 28. One Indian national killed.</li>
+<li>Iran considering yuan-only transit for limited tankers.</li>
+<li>Australia rural fuel shortages — demand up 100% at terminals. First developed-nation panic buying.</li>
+<li>India airlines raising fares on jet fuel costs.</li>
+</ul>
+<hr />
+<h2>5. HUMANITARIAN IMPACT</h2>
+<p><strong>Iran:</strong> 1,444+ civilians killed, 18,551 injured (Health Ministry). 43,000 non-military sites hit (IRGC claim). 206 students killed. Azadi Tower damaged. 3.2M displaced (UN).</p>
+
+<p><strong>Lebanon:</strong> 826+ killed (103 children), 1,933 wounded since March 2. 800,000+ displaced (~1 in 7 of population). Israeli strike on healthcare center in Borj Qalaouiyah killed 12 medical workers (doctors, paramedics, nurses). 26 paramedics killed total since March 2. WHO confirmed 14 health workers killed in 24 hours. Shelter conditions desperate — 15 people per classroom, 1 toilet per 23 people. Norwegian Refugee Council: "approaching breaking point." 14% of Lebanon under evacuation orders.</p>
+
+<p><strong>Israel:</strong> 12 civilians killed, 2 soldiers killed in Lebanon. Debris from interceptions causing fires in Tel Aviv suburbs.</p>
+
+<p><strong>USA:</strong> 13 service members killed total. 6 KC-135 crash, 6 Kuwait port strike, 1 Saudi base injuries. Approximately 5,000 additional Marines deploying.</p>
+
+<p><strong>Gulf:</strong> UAE: 6 killed, 141 injured. Kuwait: 6 killed. Bahrain: 2 killed. Oman: 2 foreigners killed.</p>
+
+<p><strong>Global toll:</strong> 3,000+ killed across region (CNN estimate). Over 1M displaced.</p>
+<hr />
+<h2>6. DIPLOMATIC & POLITICAL</h2>
+<p><strong>US/Trump:</strong> "Totally obliterated" Kharg Island military targets. Threatened oil infrastructure if Hormuz blocked. War ends "when I feel it in my bones." Offered $10M reward for Mojtaba information. Called for China, France, Japan, UK, South Korea to send warships to Hormuz. Hegseth: "No quarter, no mercy for our enemy." Navy escorts "soon."</p>
+
+<p><strong>Administration fracture:</strong> David Sacks (Trump AI/crypto adviser, close to Vance/Musk) on All-In podcast: "declare victory and get out." Warned Gulf could become "uninhabitable," Israel defenses could exhaust leading to nuclear escalation. First public crack — but Trump struck Kharg same day.</p>
+
+<p><strong>Iran:</strong> Araghchi: strikes from UAE territory "highly dangerous and unacceptable." Acknowledged Russia and China as "strategic partners" with ongoing military cooperation. Denied threatening to weaponize uranium. IRGC: all US-linked facilities "legitimate targets." Considering yuan-only Hormuz transit for limited tankers.</p>
+
+<p><strong>International:</strong> Chatham House MENA director: Iran heading toward 1990s Iraq scenario — 12-year containment baseline. "Frozen conflicts tend to drift back towards war." Macron offered Paris ceasefire talks with Lebanon. India released 3 Iranian tankers (deepening bilateral channel). Italy's Salvini urged Brussels to ease Russia oil sanctions (internal government split). DPRK fired 10+ ballistic missiles during US-SK exercises — exploiting defense vacuum.</p>
+
+<p><strong>Ceasefire probability: 5-10%.</strong> Kharg strike = major escalation. Iran's horizontal expansion attacking bypass infrastructure. No diplomatic channel active. Physical destruction ensures 6+ week minimum recovery. Chatham House 12-year baseline makes "months not weeks" look conservative.</p>
+<hr />
+<h2>7. PREDICTIVE ANALYSIS — NEXT 48 HOURS</h2>
+<p><strong>Scenario A: Kharg Oil Infrastructure Strike + Regional Energy Catastrophe (50%)</strong><br>
+Trump's explicit warning that oil infrastructure is next if Hormuz blocked sets up escalation ladder. Iran's counter-threat to strike all US-linked regional oil facilities = mutually assured energy destruction. If either side crosses the oil infrastructure redline, Brent spikes past $150 (Goldman ceiling). Fujairah already struck — bypass infrastructure under attack. UAE financial centers (DIFC) being hit systematically. Gulf states' $15.1B+ revenue loss accelerates. FOMC/ECB meetings next week face stagflation trap with no good options.</p>
+
+<p><strong>Scenario B: Containment Stalemate + Duration Extension (30%)</strong><br>
+Chatham House 12-year Iraq containment framework becomes operative. US continues attrition campaign. Iran conserves remaining capabilities, relies on horizontal escalation and economic pressure. War becomes test of economic endurance. Oil holds $100-110 range. Private credit marks (Q1) trigger institutional forced selling. Goldman equity fuse ~Mar 26. Neither side achieves decisive victory. Sacks dissent grows but doesn't change policy. Fertilizer/helium crises compound over months.</p>
+
+<p><strong>Scenario C: Mojtaba Elimination + Second Succession Crisis (20%)</strong><br>
+$10M bounty + "wounded and disfigured" confirmation + continued targeting = assassination attempt likely. If Mojtaba killed, Iran enters second succession crisis in 17 days. IRGC 31-unit decentralization means attacks continue regardless. But leadership vacuum could trigger internal fractures or IRGC consolidation under even harder line. Oil spikes past $120. Shia mobilization intensifies globally. Pakistan mutual defense pact activation risk.</p>
+
+<h3>CATALYST CALENDAR</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Event</th>
+<th>Significance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mar 14 (TODAY)</strong></td>
+<td><strong>Kharg Island military targets struck</strong></td>
+<td><strong>Oil infrastructure spared but threatened. Iran horizontal escalation doctrine activated.</strong></td>
+</tr>
+<tr>
+<td>Mar 17</td>
+<td>SPR swap bids due</td>
+<td>86M barrel first tranche. Market test of release mechanism.</td>
+</tr>
+<tr>
+<td>Mar 17-18</td>
+<td>FOMC meeting</td>
+<td>Stagflation trap. Fed paralyzed between inflation and recession.</td>
+</tr>
+<tr>
+<td>Mar 18-19</td>
+<td>ECB meeting</td>
+<td>Hike now priced. European periphery pressure.</td>
+</tr>
+<tr>
+<td>Mar 19</td>
+<td>BOE meeting</td>
+<td>Hike priced. UK 30Y >5.4%.</td>
+</tr>
+<tr>
+<td>Mar 20</td>
+<td>Nowruz</td>
+<td>Persian New Year. Possible tactical pause (unlikely).</td>
+</tr>
+<tr>
+<td>~Mar 26</td>
+<td>Goldman equity fuse</td>
+<td>Two-week deleveraging window. 307% gross (ATH).</td>
+</tr>
+<tr>
+<td>Mar 15-30</td>
+<td>Q1 private credit marks</td>
+<td>8 institutions gating. 5.8% defaults ATH. Institutional forced selling.</td>
+</tr>
+<tr>
+<td>~Mar 28-Apr 1</td>
+<td>JPM retail capitulation window</td>
+<td>1-month lag from conflict onset.</td>
+</tr>
+<tr>
+<td>~Apr 10-12</td>
+<td>40-day mourning floor</td>
+<td>Minimum for regime transition. Extended by martyrdom narrative.</td>
+</tr>
+<tr>
+<td>~Mid-April</td>
+<td>Helium/fertilizer supply crunch</td>
+<td>30-40 day chipmaker inventory depleted. Planting season damage locked in.</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>8. PREDICTION TRACKER — SCORING DAY 14 SCENARIOS</h2>
+<p><strong>Day 14 Scenario A (Sustained Attrition + Global Economic Cascade — 55%):</strong> ✅ CONFIRMED. IEA release failed to calm markets — oil closed above $103 for second day. Helium/fertilizer crises deepening exactly as predicted. Lebanon displacement exceeded 800K. Strike tempo continued at 15,000+ targets. No diplomatic opening. War becoming test of economic endurance as projected.</p>
+
+<p><strong>Day 14 Scenario B (Mojtaba Elimination Attempt — 25%):</strong> ⚠️ GROUNDWORK LAID. $10M bounty announced. Hegseth confirmed "wounded and disfigured." Targeting continues. No confirmed elimination attempt yet, but escalation ladder advancing. Probability maintained.</p>
+
+<p><strong>Day 14 Scenario C (Hezbollah Escalation + Regional War Expansion — 20%):</strong> ✅ CONFIRMED + EXCEEDED. 12 medical workers killed in single strike = healthcare system targeting. 826+ killed in Lebanon. "Gaza-scale" devastation threats materializing. Litani bridge destruction. But bigger development: HORIZONTAL ESCALATION to bypass infrastructure (Fujairah, DIFC) — this exceeds the Lebanon vector. Upgrading to Scenario A framework for Day 15.</p>
+
+<p><strong>Calibration note:</strong> The horizontal escalation to bypass infrastructure (Fujairah/DIFC) was the major development not fully anticipated. This represents a new phase: Iran is no longer just attacking military targets or primary chokepoints but systematically degrading the FALLBACK systems. Chatham House 12-year containment framework + Sacks admin dissent = institutional validation of duration thesis from two independent sources. Adding "Kharg oil infrastructure strike" as explicit Scenario A variant for Day 15.</p>
+<hr />
+<div class="sources-manifest"><h2>9. SOURCE MANIFEST</h2>
+<h3>Sources Consulted for This Report:</h3>
+<p><strong>Major News Outlets:</strong><br>
+- CNN Live Updates (March 14) — Kharg Island strike 90+ targets, Trump threatens oil infrastructure, Iran declares UAE "legitimate targets," 12 medics killed, Marines deploying, yuan Hormuz transit: https://www.cnn.com/world/live-news/iran-war-us-israel-trump-03-14-26<br>
+- Al Jazeera Day 15 What Is Happening — Kharg strike, IRGC retaliation threat, 826 killed Lebanon, 12 medics killed, F1 cancelled: https://www.aljazeera.com/news/2026/3/14/iran-war-what-is-happening-on-day-15-of-us-israel-attacks<br>
+- Al Jazeera Live Blog (March 14) — Tehran urges "expel" US, Kharg strike video, Fujairah fire, Iraq embassy hit: https://www.aljazeera.com/news/liveblog/2026/3/14/iran-war-live-pentagon-vows-to-ramp-up-us-military-campaign-against-iran<br>
+- Al Jazeera — 12 medics killed in Borj Qalaouiyah strike, 26 paramedics killed total: https://www.aljazeera.com/news/2026/3/14/israel-kills-12-medics-in-attack-in-southern-lebanon-as-war-drags-on<br>
+- NPR — Kharg Island strike, Trump "obliterated," 6 KC-135 deaths confirmed: https://www.npr.org/2026/03/14/nx-s1-5747838/trump-kharg-island-iran-war<br>
+- NBC News — 90+ military targets Kharg, oil infrastructure spared, Iran threatens regional oil strikes: https://www.nbcnews.com/world/iran/iran-threatens-strike-oil-facilities-us-hits-military-targets-kharg-is-rcna263453<br>
+- Washington Post — Kharg Island strike, 90+ military targets, oil infrastructure preserved: https://www.washingtonpost.com/politics/2026/03/13/trump-us-iran-war-kharg-island-oil/<br>
+- Bloomberg — Trump strikes Kharg, urges Hormuz reopening, oil infrastructure threatened: https://www.bloomberg.com/news/articles/2026-03-14/iran-repeats-retaliation-threat-as-us-hits-kharg-island-military<br>
+- CNBC — Oil above $100, IEA release failing, Strait closed, Rystad projections: https://www.cnbc.com/2026/03/14/iran-war-iea-oil-stockpile-spr-strait-hormuz.html</p>
+
+<p><strong>Government / Military Primary Sources:</strong><br>
+- CENTCOM — 90+ Kharg Island targets struck, mine storage, missile bunkers, oil preserved: https://www.centcom.mil/<br>
+- Pentagon/Hegseth — Mojtaba "wounded and disfigured," 15,000+ total targets, "no quarter": referenced via CNN/Al Jazeera<br>
+- US State Department — $10M reward for Khamenei, Oman evacuation order: referenced via CNN<br>
+- Army Secretary Driscoll — 10,000 interceptor drones deploying: referenced via Al Jazeera</p>
+
+<p><strong>Israeli Sources:</strong><br>
+- IDF — 7,600 strikes in Iran, 1,100 in Lebanon since Feb 28: referenced via Al Jazeera<br>
+- Netanyahu — Regime change through airpower, Iranians must act: referenced via prior reports<br>
+- Defense Minister Katz — "Gaza-scale" Lebanon warning: referenced via Al Jazeera</p>
+
+<p><strong>Iranian Sources:</strong><br>
+- IRGC — UAE ports "legitimate targets," blanket doctrine on US-linked facilities: referenced via CNN/Al Jazeera<br>
+- Foreign Minister Araghchi — Strikes from UAE territory "highly dangerous," Russia/China strategic partners: referenced via CNN<br>
+- Fars News — 15+ explosions Kharg, no oil damage, Heidar missiles threatened: referenced via Al Jazeera<br>
+- Khatam al-Anbiya Command — Retaliation threat on regional oil facilities: referenced via state media</p>
+
+<p><strong>Regional Sources:</strong><br>
+- Saudi Ministry of Defense — 19 drones + 1 ballistic missile intercepted Saturday, Diplomatic Quarter targeted: referenced via Al Jazeera<br>
+- UAE authorities — Dubai debris from interception, Fujairah fire, DIFC damaged: referenced via CNN<br>
+- Qatar MOD — Missile intercepted Saturday, evacuations ordered: referenced via Al Jazeera<br>
+- Bahrain MOI — Sirens sounded, shelter orders: referenced via CNN<br>
+- Lebanon Health Ministry — 826 killed (103 children), 12 medics killed, 26 paramedics total: referenced via Al Jazeera</p>
+
+<p><strong>OSINT / Think Tanks:</strong><br>
+- Wikipedia — 2026 Iran War (Kharg strike, 7,600 Israel strikes, timeline): https://en.wikipedia.org/wiki/2026_Iran_war<br>
+- Wikipedia — 2026 Lebanon War (826 killed, displacement, healthcare targeting): https://en.wikipedia.org/wiki/2026_Lebanon_war<br>
+- Chatham House — "Next Iraq" containment framework, 12-year baseline, IRGC = Republican Guard parallel: referenced via MCC R#28</p>
+
+<p><strong>Financial / Energy:</strong><br>
+- MCC Intelligence Report #28 (CRITICAL — Kharg 90+ targets, horizontal escalation doctrine, Fujairah/DIFC attacked, bypass infrastructure under threat, SPR swap structure, fertilizer "worse than 2022," Chatham House 12-year baseline, Sacks admin dissent, 8 PC institutions gating, Goldman 307% gross, Australia panic buying, DPRK exploiting vacuum, Anduril $20B contract): Private intelligence report<br>
+- IEA Oil Market Report March 2026 — "Largest supply disruption in history," 400M barrel release: https://www.iea.org/reports/oil-market-report-march-2026<br>
+- Investing.com — Brent $103.14, 52-week range $58.40-$119.50: https://www.investing.com/commodities/brent-oil<br>
+- CRU — Fertilizer crisis "worse than 2022," 50% urea disrupted: referenced via MCC R#28<br>
+- Rystad Energy — 2-month war = $110, 4-month war = $135: referenced via CNBC</p>
+
+<p><strong>UN / International:</strong><br>
+- UN Secretary-General Guterres — Called for Israel/Hezbollah ceasefire, Hormuz restrictions "immense impact" on humanitarian: referenced via CNN<br>
+- WHO — 14 health workers killed in 24h, 12 in Borj Qalaouiyah confirmed: referenced via Al Jazeera<br>
+- Norwegian Refugee Council — Lebanon "approaching breaking point," 14% under evacuation: referenced via Al Jazeera<br>
+- Macron — Offered Paris ceasefire talks with Lebanon: referenced via Al Jazeera</p>
+<hr />
+<p><em>END SITREP-2026-03-14</em><br>
+<em>Sources consulted: 30+ individual URLs across 25+ outlets. Report length: ~3,500 words (excl. source manifest).</em><br>
+<em>Next report: SITREP-2026-03-15</em></p></div>
+</article>
+
+<script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('sitrep-theme', next);
+  }
+  (function() {
+    const s = localStorage.getItem('sitrep-theme');
+    if (s) document.documentElement.setAttribute('data-theme', s);
+  })();
+  document.querySelector('.theme-toggle').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleTheme(); }
+  });
+  // Auto-wrap Scenario blocks
+  (function() {
+    const ps = document.querySelectorAll('.article p');
+    ps.forEach(function(p) {
+      const t = p.textContent || '';
+      let c = '';
+      if (t.match(/^Scenario A[:\s]/i)) c = 'scenario scenario-a';
+      else if (t.match(/^Scenario B[:\s]/i)) c = 'scenario scenario-b';
+      else if (t.match(/^Scenario C[:\s]/i)) c = 'scenario scenario-c';
+      if (c) { const d = document.createElement('div'); d.className = c; p.parentNode.insertBefore(d, p); d.appendChild(p); }
+    });
+  })();
+</script>
+
+</body>
+</html>
